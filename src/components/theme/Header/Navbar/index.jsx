@@ -3,13 +3,14 @@ import { Link } from 'gatsby';
 import { ThemeContext } from 'providers/ThemeProvider';
 import { Container } from 'components/common';
 import NavbarLinks from '../NavbarLinks';
-import { Wrapper, Links} from './styles';
+import { NavWrapper, Wrapper, Links} from './styles';
 import social from './social.json';
 
 const Navbar = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
+    <NavWrapper theme={theme}>
     <Wrapper as={Container}>
         <Links>
         {social.map(({ id, name, link, icon, style }) => (
@@ -20,6 +21,7 @@ const Navbar = () => {
       </Links>
       <NavbarLinks desktop />
     </Wrapper>
+    </NavWrapper>
   );
 };
 
