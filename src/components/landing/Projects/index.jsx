@@ -8,47 +8,12 @@ import { Wrapper, Grid, Item, Content, Stats, Languages } from './styles';
 
 export const Projects = () => {
   const { theme } = useContext(ThemeContext);
-  const {
-    github: {
-      viewer: {
-        repositories: { edges },
-      },
-    },
-  } = useStaticQuery(
-    graphql`
-      {
-        github {
-          viewer {
-            repositories(first: 8, orderBy: { field: STARGAZERS, direction: DESC }) {
-              edges {
-                node {
-                  id
-                  name
-                  url
-                  description
-                  stargazers {
-                    totalCount
-                  }
-                  forkCount
-                  languages(first: 3) {
-                    nodes {
-                      id,
-                      name
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    `
-  );
+  const edges = null;
   return (
     <Wrapper as={Container} id="projects">
-      <h2>Projects</h2>
+      <h1>Projects</h1>
       <Grid>
-        {edges.map(({ node }) => (
+        { edges ? edges.map(({ node }) => (
           <Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer" theme={theme}>
             <Card theme={theme}>
               <Content>
@@ -80,7 +45,7 @@ export const Projects = () => {
               </TitleWrap>
             </Card>
           </Item>
-        ))}
+        )) : null}
       </Grid>
     </Wrapper>
   );

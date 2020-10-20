@@ -1,0 +1,21 @@
+[
+  {
+    "id": 0,
+    "name": "LinkedIn",
+    "link": "https://www.linkedin.com/in/forbesmiyasato/",
+    "icon": "/icons/linkedin.svg"
+  },
+  {
+    "id": 1,
+    "name": "Github",
+    "link": "https://github.com/forbesmiyasato",
+    "icon": "/icons/github.svg",
+    "style": "github"
+  },
+  {
+    "id": 2,
+    "name": "Instagram",
+    "link": "https://instagram.com/forbesmiyasato",
+    "icon": "/icons/instagram.jpg"
+  }
+]

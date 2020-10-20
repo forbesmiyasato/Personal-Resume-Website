@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
+import { Link } from 'gatsby';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { ThemeContext } from 'providers/ThemeProvider';
 import { Container, Button } from 'components/common';
-import dev from 'assets/illustrations/skills.svg';
+import image from 'assets/images/me.jpeg';
 import { Wrapper, SkillsWrapper, Details, Thumbnail } from './styles';
 
 export const Skills = () => {
@@ -12,17 +13,19 @@ export const Skills = () => {
     <Wrapper id="about">
       <SkillsWrapper as={Container}>
         <Thumbnail>
-          <img src={dev} alt="I’m John and I’m a Backend & Devops engineer!" />
+          <img className={'profile-pic'} src={image} alt="I’m John and I’m a Backend & Devops engineer!" />
         </Thumbnail>
         <Details theme={theme}>
-          <h1>More about me</h1>
+          <h1>About me</h1>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry’s standard dummy.
+            I am a 2020 graduate of Pacific University with a degree in Computer Science and currently pursuing a Masters
+            of Computer Science at Portland State University. I'm passionate about software engineering and full-stack development.
           </p>
-          <Button as={AnchorLink} href="#contact">
-            Hire me
+          <a href="/files/Forbes_Miyasato_Resume.pdf" target="_blank">
+          <Button>
+            View Resume
           </Button>
+          </a>
         </Details>
       </SkillsWrapper>
     </Wrapper>

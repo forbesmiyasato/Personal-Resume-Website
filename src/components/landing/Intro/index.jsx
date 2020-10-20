@@ -10,20 +10,23 @@ export const Intro = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
+    <div style={{height: '100vh'}}>
     <Wrapper>
       <Header />
       <IntroWrapper as={Container}>
         <Details theme={theme}>
-          <h1>Hi There!</h1>
-          <h4>I’m John and I’m a JAMStack engineer!</h4>
-          <Button as={AnchorLink} href="#contact">
-            Hire me
+          <h1>Hi There! <br/> My name is Forbes Miyasato.</h1>
+          {/* <h1>My name is Forbes Miyasato.</h1> */}
+          <h4>I’m an aspiring software engineer.</h4>
+          <Button as={AnchorLink} href="#projects">
+            Learn more
           </Button>
         </Details>
         <Thumbnail>
-          <img src={dev} alt="I’m John and I’m a JAMStack engineer!" />
+          <img src={dev} alt="I'm Forbes and this is my portfolio website" />
         </Thumbnail>
       </IntroWrapper>
     </Wrapper>
+    </div>
   );
 };

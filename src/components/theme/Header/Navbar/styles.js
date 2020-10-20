@@ -7,10 +7,20 @@ export const Wrapper = styled.div`
   justify-content: space-between;
 `;
 
-export const Brand = styled.a`
-  color: ${({ theme }) => (theme === 'light' ? '#000' : '#fff')};
+export const Links = styled.div`
+  display: flex;
+  align-items: center;
 
-  @media (max-width: 960px) {
-    mix-blend-mode: ${({ theme }) => (theme === 'light' ? 'unset' : 'difference')};
+  a {
+    margin: 0 0.5rem;
+
+    img {
+      margin: 0;
+    }
+
+    &:first-child,
+    &:last-child {
+      margin: 0;
+    }
   }
 `;

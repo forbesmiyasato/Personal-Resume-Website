@@ -1,106 +1,56 @@
-# Portfolio for developers
+# Personal Resume Website
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/settings?s=https%3A%2F%2Fgithub.com%2Fsmakosh%2Fgatsby-portfolio-dev&c=1&env=GATSBY_PORTFOLIO_GITHUB_TOKEN%2CGATSBY_PORTFOLIO_FORMIK_ENDPOINT%2CGATSBY_PORTFOLIO_RECAPTCHA_KEY&envDescription=Required%20to%20fetch%20your%20repositories%20from%20GitHub&envLink=https://github.com/smakosh/gatsby-portfolio-dev&framework=nextjs)
+<br />
 
-[![Powered by Vercel](./powered-by-vercel.svg)](https://vercel.com?utm_source=smakosh)
+### Welcome!
+<hr>
 
-## Theme
+Hey there! Here is my personal resume website.
 
-[Gatsby-theme-portfolio](https://github.com/smakosh/gatsby-theme-portfolio)
+<br />
 
-## Features
+### Table of Contents <g-emoji class="g-emoji" alias="book" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4d6.png">📖</g-emoji>
+<hr>
 
-- Eslint/Prettier configured
-- Scores 100% on a11y / Performance / PWA / SEO
-- PWA (desktop & mobile)
-- Easy to customize
-- Nice project structure
-- Amazing illustrations by [Undraw.co](https://undraw.co)
-- Tablet & mobile friendly
-- Continuous deployment with [Vercel](https://vercel.com/?utm_source=smakosh)
-- Or with Netlify, check [Netlify branch](https://github.com/smakosh/gatsby-portfolio-dev/tree/netlify)
-- A contact form protected by Google Recaptcha
-- Can be deployed with one click
-- Functional components with ~~Recompose~~ React Hooks! ~~ready to migrate to React hooks!~~
-- Fetches your Github pinned projects with most stars (You could customize this if you wish)
-- One click deployment to Vercel
+  - [Welcome](#welcome)
+  - [**Get Started**](#get-started-)
+  - [Technologies/Integrations](#technologies-integrations-)
+  - [Contribute](#contribute-)
+  - [Acknowledgements](#acknowledgements-)
+  - [License/Stats/Author](#license-stats-author-)
 
-## Design
+<br />
 
-Project on [Behance](https://www.behance.net/gallery/74172961/Free-Gatsby-portfolio-for-developers)
+### Get Started <g-emoji class="g-emoji" alias="rocket" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f680.png">🚀</g-emoji>
+<hr>
 
-## Structure
+Check it out at https://forbesmiyasato.com
 
-```bash
-.
-├── data
-│   └── config              # SEO related tags
-├── src
-│   └── assets              # Assets
-│   │   │── icons             # icons
-│   │   │── illustrations     # illustrations from (undraw.co)
-│   │   └── thumbnail         # cover of your website when it's shared to social media
-│   ├── components          # Components
-│   │   │── common            # Common components
-│   │   │── landing           # Components used on the landing page
-│   │   └── theme             # Header & Footer
-│   └── pages               # Pages
-└── static                  # favicon & Netlify redirects
-```
+<br />
 
-## Prerequisites
+### Technologies, Integrations <g-emoji class="g-emoji" alias="toolbox" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f9f0.png">🧰</g-emoji>
+<hr>
 
-### Online
-
-1. Create an account at [Formik](https://formik.com/?utm_source=smakosh) and grab your form endpoint url
-2. Grab a Google recaptcha key from [Google Recaptcha](https://www.google.com/recaptcha/admin)
-3. Grab your Github token from [GitHub](https://github.com/settings/tokens/new?scopes=repo&description=portfolio-dev)
-4. Click [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/settings?s=https%3A%2F%2Fgithub.com%2Fsmakosh%2Fgatsby-portfolio-dev&c=1&env=GATSBY_PORTFOLIO_GITHUB_TOKEN%2CGATSBY_PORTFOLIO_FORMIK_ENDPOINT%2CGATSBY_PORTFOLIO_RECAPTCHA_KEY&envDescription=Required%20to%20fetch%20your%20repositories%20from%20GitHub&envLink=https://github.com/smakosh/gatsby-portfolio-dev&framework=nextjs) and pass in your:
+  - Languages: JavaScript (JSX), CSS
+  - React
+  - GatsbyJS
+  - Sass
   
-  - Formik form endpoint
-  - Google recaptcha public key
-  - Github token
+<br />
 
-To Env variables section.
+### Contribute <g-emoji class="g-emoji" alias="handshake" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f91d.png">🤝</g-emoji>
+<hr>
 
-### Locally
+This project is currently feature complete and not looking for collaborators.
 
-1. Create an account at [Formik](https://formik.com/?utm_source=smakosh)
-2. Install [Yarn](https://yarnpkg.com/en/)
-3. Grab a Google recaptcha key from [Google Recaptcha](https://www.google.com/recaptcha/admin)
-4. Grab your Github token from GitHub
-5. Run `cp .env.development.template .env.development`
-6. Run `yarn && yarn start`
+<br />
 
-> You could run `vercel env pull` to get your env variables from Vercel.
+### Acknowledgements <g-emoji class="g-emoji" alias="blue_heart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f499.png">💙</g-emoji>
+<hr>
 
-### Deploying locally to Vercel
+This project is based on gatsby-portfolio-dev (https://github.com/smakosh/gatsby-portfolio-dev). Thank you @Smakosh (https://smakosh.com) for your hard work.
 
-I highly recommend that you push to GitHub/GitLab and deploy your repository to Vercel instead or just hit the Deploy button.
-
-### Clean the cache
-
-This removes the `.cache/` & `public/` folders
-
-```bash
-yarn reset
-```
-
-## Built with
-
-- Adobe XD
-- Gatsby
-- React & GraphQL
-- Formik
-- Google recaptcha
-- VSCode
-- And these useful of JavaScript libraries & Gatsby plugins [package.json](package.json)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for more details
-
-## Contributors
+Also, thank you all gatsby-portfolio-dev contributors for help providing this amazing gatsby starter.
 
 - [Ajay NS](https://github.com/ajayns) https://github.com/smakosh/gatsby-portfolio-dev/pull/3
 - [Ryan Lee](https://github.com/drdgvhbh) https://github.com/smakosh/gatsby-portfolio-dev/pull/6
@@ -113,7 +63,16 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 - [manula thejan](https://github.com/manula2004) https://github.com/smakosh/gatsby-portfolio-dev/pull/38
 - [Benjamin Lo](https://github.com/benji011) https://github.com/smakosh/gatsby-portfolio-dev/pull/40
 - [Smakosh](https://smakosh.com)
+<br />
 
-## Support
+### License, Stats, Author <g-emoji class="g-emoji" alias="scroll" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4dc.png">📜</g-emoji>
+<hr>
+<!-- badge cluster -->
 
-If you love this Gatsby template and want to support me, you can do so through my GitHub profile.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for more details
+
+This repository was authored by *Forbes Miyasato*.
+
+Copyright © 2020. All rights reserved.
+
+[Back to Table of Contents](#table-of-contents-)

@@ -21,7 +21,7 @@ export const IntroWrapper = styled.div`
 `;
 
 export const Details = styled.div`
-  flex: 1;
+  flex: 2.5;
 
   @media (max-width: 960px) {
     width: 100%;
