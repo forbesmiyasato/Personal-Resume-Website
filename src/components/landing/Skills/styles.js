@@ -51,6 +51,14 @@ export const Details = styled.div`
                 theme === "light" ? "unset" : "difference"};
         }
     }
+
+    a {
+        color: ${({ theme }) => (theme === "dark" ? "#fff" : "#212121")};
+    }
+
+    ol li {
+        color: ${({ theme }) => (theme === "dark" ? "#fff" : "#212121")};
+    }
 `;
 
 export const Thumbnail = styled.div`

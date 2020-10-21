@@ -1,15 +1,11 @@
 import React, { useContext, useState } from "react";
 import { ThemeContext } from "providers/ThemeProvider";
 import { Container, Button } from "components/common";
-import about from "assets/images/me_about.jpg";
-import tech from "assets/images/me_tech.jpeg";
-import hobby from "assets/images/me_hobby.jpg";
+import image from "assets/images/me.jpeg";
 import { Wrapper, SkillsWrapper, Details, Thumbnail } from "./styles";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import technologies from "./technologies.json";
 import Link from "@material-ui/core/Link";
-import Technologies from './technologies'
-import "./skills.scss";
 
 export const Skills = () => {
     const { theme } = useContext(ThemeContext);
@@ -23,8 +19,8 @@ export const Skills = () => {
         setState("general");
     };
 
-    const hobbyClicked = () => {
-        setState("hobby");
+    const handleClick = () => {
+        console.log("test");
     };
 
     return (
@@ -34,7 +30,7 @@ export const Skills = () => {
                     <Thumbnail>
                         <img
                             className={"profile-pic"}
-                            src={about}
+                            src={image}
                             alt="About Forbes"
                         />
                     </Thumbnail>
@@ -46,7 +42,7 @@ export const Skills = () => {
                             <Link color="inherit" onClick={topSkillsClicked}>
                                 Technologies
                             </Link>
-                            <Link color="inherit" onClick={hobbyClicked}>
+                            <Link color="inherit" onClick={topSkillsClicked}>
                                 Things I do for fun
                             </Link>
                         </Breadcrumbs>
@@ -71,7 +67,7 @@ export const Skills = () => {
                     <Thumbnail>
                         <img
                             className={"profile-pic"}
-                            src={tech}
+                            src={image}
                             alt="About Forbes"
                         />
                     </Thumbnail>
@@ -83,36 +79,17 @@ export const Skills = () => {
                             <Link color="inherit" onClick={topSkillsClicked}>
                                 <h1>Technologies</h1>
                             </Link>
-                            <Link color="inherit" onClick={hobbyClicked}>
+                            <Link color="inherit" onClick={topSkillsClicked}>
                                 Things I do for fun
                             </Link>
                         </Breadcrumbs>
-                        <Technologies />
-                    </Details>
-                </SkillsWrapper>
-            )}
-            {state === "hobby" && (
-                <SkillsWrapper as={Container}>
-                    <Thumbnail>
-                        <img
-                            className={"profile-pic"}
-                            src={hobby}
-                            alt="About Forbes"
-                        />
-                    </Thumbnail>
-                    <Details theme={theme}>
-                        <Breadcrumbs aria-label="breadcrumb">
-                            <Link color="inherit" onClick={backToGeneral}>
-                                About Me
-                            </Link>
-                            <Link color="inherit" onClick={topSkillsClicked}>
-                                Technologies
-                            </Link>
-                            <Link color="inherit" onClick={hobbyClicked}>
-                                <h1>Things I do for fun</h1>
-                            </Link>
-                        </Breadcrumbs>
-                        <p>I love to play basketball and workout.</p>
+                        <ul className="skills-list">
+                            {technologies.map(({ i, name, icon }) => (
+                                <li key={i} className="skills-list-item">
+                                    <img width={"36"} src={icon} />
+                                </li>
+                            ))}
+                        </ul>
                     </Details>
                 </SkillsWrapper>
             )}
