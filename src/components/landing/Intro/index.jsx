@@ -5,16 +5,16 @@ import { Header } from 'components/theme';
 import { Container, Button } from 'components/common';
 import dev from 'assets/illustrations/dev.svg';
 import blobOverlay from 'assets/illustrations/overlay.svg'
-import { Wrapper, IntroWrapper, Details, Thumbnail, DetailsWrapper } from './styles';
+import { Wrapper, IntroWrapper, Details, Thumbnail } from './styles';
 
 export const Intro = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <IntroWrapper>
+    <>
     <Header />
-    <Wrapper theme={theme}>
-      <DetailsWrapper as={Container}>
+    <IntroWrapper>
+      <Wrapper as={Container}>
         <Details theme={theme}>
           <h1>Hi There! <br/> My name is Forbes Miyasato.</h1>
           {/* <h1>My name is Forbes Miyasato.</h1> */}
@@ -29,8 +29,8 @@ export const Intro = () => {
         </svg> */}
           <img src={dev} alt="I'm Forbes and this is my portfolio website" />
         </Thumbnail>
-      </DetailsWrapper>
-    </Wrapper>
+      </Wrapper>
     </IntroWrapper>
+    </>
   );
 };

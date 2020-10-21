@@ -6,18 +6,19 @@ export const IntroWrapper = styled.div`
   height: 100vh;
   padding-bottom: 4rem;
   background-image: url(${overlayIllustration});
-  background-size: 50%;
-  background-position: right top;
+  background-size: contain;
+  background-position-x: 55vw;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (max-width: 960px) {
+    padding-top: calc(7rem + 24px) !important;
+    justify-content: normal;
+  }
 `;
 
 export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-`;
-
-export const DetailsWrapper = styled.div`
   padding: 4rem 0;
   display: flex;
   align-items: center;
@@ -25,6 +26,7 @@ export const DetailsWrapper = styled.div`
 
   @media (max-width: 960px) {
     flex-direction: column;
+    padding: 0 0;
   }
 `;
 

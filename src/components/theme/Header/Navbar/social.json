@@ -3,19 +3,21 @@
     "id": 0,
     "name": "LinkedIn",
     "link": "https://www.linkedin.com/in/forbesmiyasato/",
-    "icon": "/icons/linkedin.svg"
+    "icon": "/icons/linkedin.svg",
+    "iconDark": "/icons/linkedin.svg"
   },
   {
     "id": 1,
     "name": "Github",
     "link": "https://github.com/forbesmiyasato",
-    "icon": "/icons/github.svg",
-    "style": "github"
+    "icon": "/icons/github.png",
+    "iconDark": "/icons/github-dark.png"
   },
   {
     "id": 2,
     "name": "Instagram",
     "link": "https://instagram.com/forbesmiyasato",
-    "icon": "/icons/instagram.jpg"
+    "icon": "/icons/instagram.jpg",
+    "iconDark": "/icons/instagram.jpg"
   }
 ]
