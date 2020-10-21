@@ -4,13 +4,12 @@ import { ThemeContext } from 'providers/ThemeProvider';
 import { Container } from 'components/common';
 import NavbarLinks from '../NavbarLinks';
 import { NavWrapper, Wrapper, Links} from './styles';
-import social from './social.json';
+import social from '../../../social.json';
 
 const Navbar = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <NavWrapper theme={theme}>
     <Wrapper as={Container}>
         <Links>
         {social.map(({ id, name, link, icon, iconDark }) => (
@@ -24,7 +23,6 @@ const Navbar = () => {
       </Links>
       <NavbarLinks desktop />
     </Wrapper>
-    </NavWrapper>
   );
 };
 
