@@ -6,3 +6,13 @@
         margin: 10px 10px 0 0;
     }
 }
+
+.section-box {
+    @media (min-width: 960px) {
+        width: 480px;
+    };
+
+    @media (min-width: 1280px) {
+        width: auto;
+    }
+}

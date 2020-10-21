@@ -97,7 +97,7 @@ const Technologies = () => {
                         aria-label="full width tabs example"
                     >
                         <Tab label="All" {...a11yProps(0)} />
-                        <Tab label="Most Familiar" {...a11yProps(1)} />
+                        <Tab label="Most Used" {...a11yProps(1)} />
                         <Tab label="Looking to Learn" {...a11yProps(2)} />
                     </Tabs>
                 </AppBar>

@@ -10,6 +10,7 @@ import Link from "@material-ui/core/Link";
 import Technologies from './technologies'
 import "./skills.scss";
 
+
 export const Skills = () => {
     const { theme } = useContext(ThemeContext);
     const [state, setState] = useState("general");
@@ -46,10 +47,10 @@ export const Skills = () => {
                                 Technologies
                             </Link>
                             <Link style={{cursor: 'pointer'}} color="inherit" onClick={hobbyClicked}>
-                                Things I do for fun
+                                Hobbies
                             </Link>
                         </Breadcrumbs>
-                        <p>
+                        <p className="section-box">
                             I am a 2020 graduate of Pacific University with a
                             degree in Computer Science and currently pursuing a
                             Masters of Computer Science at Portland State
@@ -83,7 +84,7 @@ export const Skills = () => {
                                 <h1>Technologies</h1>
                             </Link>
                             <Link style={{cursor: 'pointer'}} color="inherit" onClick={hobbyClicked}>
-                                Things I do for fun
+                                Hobbies
                             </Link>
                         </Breadcrumbs>
                         <Technologies />
@@ -108,10 +109,10 @@ export const Skills = () => {
                                 Technologies
                             </Link>
                             <Link color="inherit" onClick={hobbyClicked}>
-                                <h1>Things I do for fun</h1>
+                                <h1>Hobbies</h1>
                             </Link>
                         </Breadcrumbs>
-                        <p>I love to play basketball and workout.</p>
+                        <p className="section-box">I love to play basketball and workout.</p>
                     </Details>
                 </SkillsWrapper>
             )}
