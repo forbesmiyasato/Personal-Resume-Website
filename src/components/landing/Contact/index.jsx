@@ -27,24 +27,28 @@ export const Contact = () => {
                         </a>
                         <p>forbesmiyasato@yahoo.com</p>
                     </div>
-                    {social.map(({ id, name, link, icon, iconDark }) => (
-                        <div>
-                            <a
-                                key={id}
-                                href={link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label={`follow me on ${name}`}
-                            >
-                                {theme === "light" ? (
-                                    <img width="24" src={icon} alt={name} />
-                                ) : (
-                                    <img width="24" src={iconDark} alt={name} />
-                                )}
-                            </a>
-                            <p>{name}</p>
-                        </div>
-                    ))}
+                        {social.map(({ id, name, link, icon, iconDark }) => (
+                            <div key={id} className="contact-social-icon">
+                                <a
+                                    key={id}
+                                    href={link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`follow me on ${name}`}
+                                >
+                                    {theme === "light" ? (
+                                        <img width="24" src={icon} alt={name} />
+                                    ) : (
+                                        <img
+                                            width="24"
+                                            src={iconDark}
+                                            alt={name}
+                                        />
+                                    )}
+                                </a>
+                                <p>{name}</p>
+                            </div>
+                        ))}
                 </div>
             </Details>
             <Thumbnail>

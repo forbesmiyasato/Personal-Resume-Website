@@ -32,4 +32,10 @@
         width: 32px;
         margin-bottom: 0;
     }
+
+    & .contact-social-icon {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 }

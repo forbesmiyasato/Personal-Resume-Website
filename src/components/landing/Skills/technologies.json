@@ -1,0 +1,123 @@
+[
+    {
+      "id": 0,
+      "name": "C++",
+      "icon": "/icons/c++.svg"
+    },
+    {
+        "id": 0,
+        "name": "C Programming Language",
+        "icon": "/icons/c.svg"
+    },
+    {
+        "id": 0,
+        "name": "Java",
+        "icon": "/icons/java.svg"
+    },
+    {
+        "id": 0,
+        "name": "Python",
+        "icon": "/icons/python.svg"
+    },
+    {
+        "id": 0,
+        "name": "JavaScript",
+        "icon": "/icons/javascript.svg"
+    },
+    {
+        "id": 0,
+        "name": "SQL",
+        "icon": "/icons/sql.svg"
+    },
+    {
+        "id": 0,
+        "name": "PHP",
+        "icon": "/icons/php.svg"
+    },
+    {
+        "id": 0,
+        "name": "HTML",
+        "icon": "/icons/html.svg"
+    },
+    {
+        "id": 0,
+        "name": "CSS",
+        "icon": "/icons/css.svg"
+    },
+    {
+        "id": 0,
+        "name": "React, React Native",
+        "icon": "/icons/react.svg"
+    },
+    {
+        "id": 0,
+        "name": "Go Programming Language",
+        "icon": "/icons/go.svg"
+    },
+    {
+        "id": 0,
+        "name": "Sass",
+        "icon": "/icons/sass.svg"
+    },
+    {
+        "id": 0,
+        "name": "AWS",
+        "icon": "/icons/aws.svg"
+    },
+    {
+        "id": 0,
+        "name": "NodeJS",
+        "icon": "/icons/node-js.svg"
+    },
+    {
+        "id": 0,
+        "name": "Rest API",
+        "icon": "/icons/rest-api.svg"
+    },
+    {
+        "id": 0,
+        "name": "Cloud Computing",
+        "icon": "/icons/cloud-computing.svg"
+    },
+    {
+        "id": 0,
+        "name": "Windows",
+        "icon": "/icons/windows.svg"
+    },
+    {
+        "id": 0,
+        "name": "Linux",
+        "icon": "/icons/linux.svg"
+    },
+    {
+        "id": 0,
+        "name": "Android",
+        "icon": "/icons/android.svg"
+    },
+    {
+        "id": 0,
+        "name": "Gatsby",
+        "icon": "/icons/gatsby.svg"
+    },
+    {
+        "id": 0,
+        "name": "Flask",
+        "icon": "/icons/flask.svg"
+    },
+    {
+        "id": 0,
+        "name": "Git",
+        "icon": "/icons/git.svg"
+    },
+    {
+        "id": 0,
+        "name": "MongoDB",
+        "icon": "/icons/mongodb.svg"
+    },
+    {
+        "id": 0,
+        "name": "PostgreSQL",
+        "icon": "/icons/postgresql.svg"
+    }
+  ]
+  
