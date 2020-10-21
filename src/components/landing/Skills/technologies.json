@@ -2,122 +2,164 @@
     {
       "id": 0,
       "name": "C++",
-      "icon": "/icons/c++.svg"
+      "icon": "/icons/c++.svg",
+      "familiarity": "primary"
     },
     {
         "id": 0,
         "name": "C Programming Language",
-        "icon": "/icons/c.svg"
+        "icon": "/icons/c.svg",
+        "familiarity": "primary"
     },
     {
         "id": 0,
         "name": "Java",
-        "icon": "/icons/java.svg"
+        "icon": "/icons/java.svg",
+        "familiarity": "primary"
     },
     {
         "id": 0,
         "name": "Python",
-        "icon": "/icons/python.svg"
+        "icon": "/icons/python.svg",
+        "familiarity": "used"
     },
     {
         "id": 0,
         "name": "JavaScript",
-        "icon": "/icons/javascript.svg"
+        "icon": "/icons/javascript.svg",
+        "familiarity": "primary"
     },
     {
         "id": 0,
         "name": "SQL",
-        "icon": "/icons/sql.svg"
+        "icon": "/icons/sql.svg",
+        "familiarity": "used"
     },
     {
         "id": 0,
         "name": "PHP",
-        "icon": "/icons/php.svg"
+        "icon": "/icons/php.svg",
+        "familiarity": "used"
     },
     {
         "id": 0,
         "name": "HTML",
-        "icon": "/icons/html.svg"
+        "icon": "/icons/html.svg",
+        "familiarity": "primary"
     },
     {
         "id": 0,
         "name": "CSS",
-        "icon": "/icons/css.svg"
+        "icon": "/icons/css.svg",
+        "familiarity": "primary"
     },
     {
         "id": 0,
         "name": "React, React Native",
-        "icon": "/icons/react.svg"
+        "icon": "/icons/react.svg",
+        "familiarity": "primary"
     },
     {
         "id": 0,
         "name": "Go Programming Language",
-        "icon": "/icons/go.svg"
+        "icon": "/icons/go.svg",
+        "familiarity": "used"
     },
     {
         "id": 0,
         "name": "Sass",
-        "icon": "/icons/sass.svg"
+        "icon": "/icons/sass.svg",
+        "familiarity": "primary"
     },
     {
         "id": 0,
         "name": "AWS",
-        "icon": "/icons/aws.svg"
+        "icon": "/icons/aws.svg",
+        "familiarity": "used"
     },
     {
         "id": 0,
         "name": "NodeJS",
-        "icon": "/icons/node-js.svg"
+        "icon": "/icons/node-js.svg",
+        "familiarity": "used"
     },
     {
         "id": 0,
         "name": "Rest API",
-        "icon": "/icons/rest-api.svg"
+        "icon": "/icons/rest-api.svg",
+        "familiarity": "primary"
     },
     {
         "id": 0,
         "name": "Cloud Computing",
-        "icon": "/icons/cloud-computing.svg"
+        "icon": "/icons/cloud-computing.svg",
+        "familiarity": "used"
     },
     {
         "id": 0,
         "name": "Windows",
-        "icon": "/icons/windows.svg"
+        "icon": "/icons/windows.svg",
+        "familiarity": "used"
     },
     {
         "id": 0,
         "name": "Linux",
-        "icon": "/icons/linux.svg"
+        "icon": "/icons/linux.svg",
+        "familiarity": "used"
     },
     {
         "id": 0,
         "name": "Android",
-        "icon": "/icons/android.svg"
+        "icon": "/icons/android.svg",
+        "familiarity": "used"
     },
     {
         "id": 0,
         "name": "Gatsby",
-        "icon": "/icons/gatsby.svg"
+        "icon": "/icons/gatsby.svg",
+        "familiarity": "used"
     },
     {
         "id": 0,
         "name": "Flask",
-        "icon": "/icons/flask.svg"
+        "icon": "/icons/flask.svg",
+        "familiarity": "used"
     },
     {
         "id": 0,
         "name": "Git",
-        "icon": "/icons/git.svg"
+        "icon": "/icons/git.svg",
+        "familiarity": "primary"
     },
     {
         "id": 0,
         "name": "MongoDB",
-        "icon": "/icons/mongodb.svg"
+        "icon": "/icons/mongodb.svg",
+        "familiarity": "used"
     },
     {
         "id": 0,
         "name": "PostgreSQL",
-        "icon": "/icons/postgresql.svg"
+        "icon": "/icons/postgresql.svg",
+        "familiarity": "used"
+    },
+    {
+        "id": 0,
+        "name": "ExpressJS",
+        "icon": "/icons/expressjs.svg",
+        "familiarity": "used"
+    },
+    {
+        "id": 0,
+        "name": "Jest",
+        "icon": "/icons/jest.svg",
+        "familiarity": "used"
+    },
+    {
+        "id": 0,
+        "name": "JUnit",
+        "icon": "/icons/junit.svg",
+        "familiarity": "used"
     }
   ]
   

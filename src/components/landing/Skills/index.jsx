@@ -6,7 +6,6 @@ import tech from "assets/images/me_tech.jpeg";
 import hobby from "assets/images/me_hobby.jpg";
 import { Wrapper, SkillsWrapper, Details, Thumbnail } from "./styles";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
-import technologies from "./technologies.json";
 import Link from "@material-ui/core/Link";
 import Technologies from './technologies'
 import "./skills.scss";
@@ -43,10 +42,10 @@ export const Skills = () => {
                             <Link color="inherit" onClick={backToGeneral}>
                                 <h1>About me</h1>
                             </Link>
-                            <Link color="inherit" onClick={topSkillsClicked}>
+                            <Link style={{cursor: 'pointer'}} color="inherit" onClick={topSkillsClicked}>
                                 Technologies
                             </Link>
-                            <Link color="inherit" onClick={hobbyClicked}>
+                            <Link style={{cursor: 'pointer'}} color="inherit" onClick={hobbyClicked}>
                                 Things I do for fun
                             </Link>
                         </Breadcrumbs>
@@ -77,13 +76,13 @@ export const Skills = () => {
                     </Thumbnail>
                     <Details theme={theme}>
                         <Breadcrumbs aria-label="breadcrumb">
-                            <Link color="inherit" onClick={backToGeneral}>
+                            <Link style={{cursor: 'pointer'}} color="inherit" onClick={backToGeneral}>
                                 About Me
                             </Link>
                             <Link color="inherit" onClick={topSkillsClicked}>
                                 <h1>Technologies</h1>
                             </Link>
-                            <Link color="inherit" onClick={hobbyClicked}>
+                            <Link style={{cursor: 'pointer'}} color="inherit" onClick={hobbyClicked}>
                                 Things I do for fun
                             </Link>
                         </Breadcrumbs>
@@ -102,10 +101,10 @@ export const Skills = () => {
                     </Thumbnail>
                     <Details theme={theme}>
                         <Breadcrumbs aria-label="breadcrumb">
-                            <Link color="inherit" onClick={backToGeneral}>
+                            <Link style={{cursor: 'pointer'}} color="inherit" onClick={backToGeneral}>
                                 About Me
                             </Link>
-                            <Link color="inherit" onClick={topSkillsClicked}>
+                            <Link style={{cursor: 'pointer'}} color="inherit" onClick={topSkillsClicked}>
                                 Technologies
                             </Link>
                             <Link color="inherit" onClick={hobbyClicked}>

@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ThemeContext } from "providers/ThemeProvider";
 import technologies from "./technologies.json";
+import learn from "./learnTech.json";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import PropTypes from "prop-types";
@@ -10,6 +11,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Box from "@material-ui/core/Box";
 import SwipeableViews from "react-swipeable-views";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const customTheme = createMuiTheme({
     palette: {
@@ -32,7 +34,7 @@ function TabPanel(props) {
         >
             {value === index && (
                 <Box p={1}>
-                    <Typography>{children}</Typography>
+                    <Typography component={'span'}>{children}</Typography>
                 </Box>
             )}
         </div>
@@ -72,6 +74,16 @@ const Technologies = () => {
         setValue(index);
     };
 
+    const Icon = (i, name, src) => {
+        return (
+            <Tooltip title={name}>
+                <li key={i} className="skills-list-item">
+                    <img height={"36"} width={"36"} src={src} />
+                </li>
+            </Tooltip>
+        );
+    };
+
     return (
         <MuiThemeProvider theme={customTheme}>
             <div className={classes.root}>
@@ -96,18 +108,26 @@ const Technologies = () => {
                 >
                     <TabPanel value={value} index={0} dir={theme.direction}>
                         <ul className="skills-list">
-                            {technologies.map(({ i, name, icon }) => (
-                                <li key={i} className="skills-list-item">
-                                    <img width={"36"} src={icon} />
-                                </li>
-                            ))}
+                            {technologies.map(({ i, name, icon }) =>
+                                Icon(i, name, icon)
+                            )}
                         </ul>
                     </TabPanel>
                     <TabPanel value={value} index={1} dir={theme.direction}>
-                        Item Two
+                        <ul className="skills-list">
+                            {technologies
+                                .filter((ele) => ele.familiarity === "primary")
+                                .map(({ i, name, icon }) =>
+                                    Icon(i, name, icon)
+                                )}
+                        </ul>
                     </TabPanel>
                     <TabPanel value={value} index={2} dir={theme.direction}>
-                        Item Three
+                        <ul className="skills-list">
+                            {learn.map(({ i, name, icon }) =>
+                                Icon(i, name, icon)
+                            )}
+                        </ul>
                     </TabPanel>
                 </SwipeableViews>
             </div>
