@@ -13,7 +13,7 @@ export const Skills = () => {
     <Wrapper id="about">
       <SkillsWrapper as={Container}>
         <Thumbnail>
-          <img className={'profile-pic'} src={image} alt="I’m John and I’m a Backend & Devops engineer!" />
+          <img className={'profile-pic'} src={image} alt="About Forbes" />
         </Thumbnail>
         <Details theme={theme}>
           <h1>About me</h1>

@@ -15,6 +15,7 @@ export const IntroWrapper = styled.div`
   @media (max-width: 960px) {
     padding-top: calc(7rem + 24px) !important;
     justify-content: normal;
+    margin-bottom: -136px;
   }
 `;
 

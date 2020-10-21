@@ -5,6 +5,9 @@
   "version": "0.1.2",
   "author": "Forbes <forbesmiyasato@yahoo.com>",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "axios": "^0.19.2",
     "dotenv": "^6.2.0",
     "formik": "^2.1.4",
