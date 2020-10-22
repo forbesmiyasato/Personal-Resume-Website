@@ -54,10 +54,18 @@ export const Details = styled.div`
 
     a {
         color: ${({ theme }) => (theme === "dark" ? "#fff" : "#212121")};
+        @media (max-width: 960px) {
+            mix-blend-mode: ${({ theme }) =>
+                theme === "light" ? "unset" : "difference"};
+        }
     }
 
     ol li {
         color: ${({ theme }) => (theme === "dark" ? "#fff" : "#212121")};
+        @media (max-width: 960px) {
+            mix-blend-mode: ${({ theme }) =>
+                theme === "light" ? "unset" : "difference"};
+        }
     }
 `;
 
