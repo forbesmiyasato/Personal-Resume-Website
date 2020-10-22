@@ -34,37 +34,19 @@ export const Projects = () => {
 
     const [open, set] = useState(false);
 
-    const springRef = useRef();
-    const { size, opacity, ...rest } = useSpring({
-        ref: springRef,
-        config: config.stiff,
-        from: { size: "20%", background: "hotpink" },
-        to: {
-            size: open ? "100%" : "20%",
-            background: open ? "white" : "hotpink",
-        },
-    });
-
-    console.log(open);
-
-    const transRef = useRef();
     const transitions = useTransition(
         open ? data.allMarkdownRemark.edges : [],
-        (item) => item.name,
+        (item, i) => i,
         {
-            ref: transRef,
-            unique: true,
-            trail: 400 / data.length,
+            trail: 400 / data.allMarkdownRemark.edges.length,
             from: { opacity: 0, transform: "scale(0)" },
             enter: { opacity: 1, transform: "scale(1)" },
             leave: { opacity: 0, transform: "scale(0)" },
         }
     );
 
-    useChain(open ? [springRef, transRef] : [transRef, springRef], [
-        0,
-        open ? 0.1 : 0.6,
-    ]);
+    console.log(data);
+    console.log(transitions);
 
     return (
         <VizSensor
@@ -78,24 +60,24 @@ export const Projects = () => {
                 <h1>Projects</h1>
                 <Grid>
                     {transitions.length > 0 &&
-                        transitions.map((edge, i) => (
-                            <Item key={i} theme={theme}>
+                        transitions.map(({item, key, props}) => (
+                            <Item key={key} theme={theme} style={{ ...props }}>
                                 <Card theme={theme}>
                                     <Content>
                                         <h4>
-                                            {edge.item.node.frontmatter.title}
+                                            {item.node.frontmatter.title}
                                         </h4>
                                         <div
                                             className="project-content"
                                             dangerouslySetInnerHTML={{
-                                                __html: edge.item.node.html,
+                                                __html: item.node.html,
                                             }}
                                         ></div>
                                     </Content>
                                     <div className="project-footer">
                                         <a
                                             href={
-                                                edge.item.node.frontmatter.href
+                                                item.node.frontmatter.href
                                             }
                                             target="_blank"
                                         >
@@ -104,7 +86,7 @@ export const Projects = () => {
                                                 color="primary"
                                             >
                                                 {
-                                                    edge.item.node.frontmatter
+                                                    item.node.frontmatter
                                                         .button
                                                 }
                                             </Button>
@@ -114,7 +96,7 @@ export const Projects = () => {
                                                 <Languages>
                                                     <span>
                                                         {
-                                                            edge.item.node
+                                                            item.node
                                                                 .frontmatter
                                                                 .languages
                                                         }

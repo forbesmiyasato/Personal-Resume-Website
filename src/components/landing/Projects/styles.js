@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { animated } from 'react-spring'
 
 export const Wrapper = styled.div`
   padding: 2rem 0;
@@ -20,11 +21,12 @@ export const Grid = styled.div`
   }
 `;
 
-export const Item = styled.div`
+export const Item = styled(animated.div)`
   width: 100%;
   height: 100%;
   overflow: hidden;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.11);
+  will-change: transform, opacity;
 
   h4 {
     color: ${({ theme }) => (theme === 'light' ? '#212121' : '#fff')};
