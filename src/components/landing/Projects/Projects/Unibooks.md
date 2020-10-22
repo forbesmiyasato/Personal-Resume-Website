@@ -6,3 +6,5 @@ order: 1
 ---
 
 Unibooks is an online marketplace where students can buy, sell, or trade used textbooks (and other stuff too).
+
+I founded Unibooks hoping to solve the problem that students have a difficult time finding buyers and sellers for used textbooks.
