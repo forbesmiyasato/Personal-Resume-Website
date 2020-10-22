@@ -3,6 +3,8 @@ title: Bank Account
 date: "10-21-2020"
 languages: "C++"
 order: 3
+button: "Class Diagram"
+href: "/files/Bank_UML.pdf"
 ---
 
 Designed and implemented a bank simulator following SOLID principles and utilizing design patterns such as

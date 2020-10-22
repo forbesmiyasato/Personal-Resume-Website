@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { ThemeContext } from "providers/ThemeProvider";
 import technologies from "./technologies.json";
 import learn from "./learnTech.json";
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import PropTypes from "prop-types";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
@@ -12,14 +11,6 @@ import Tab from "@material-ui/core/Tab";
 import Box from "@material-ui/core/Box";
 import SwipeableViews from "react-swipeable-views";
 import Tooltip from "@material-ui/core/Tooltip";
-
-const customTheme = createMuiTheme({
-    palette: {
-        primary: {
-            main: "#2196f3",
-        },
-    },
-});
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -85,7 +76,6 @@ const Technologies = () => {
     };
 
     return (
-        <MuiThemeProvider theme={customTheme}>
             <div className={classes.root}>
                 <AppBar position="static" color="default">
                     <Tabs
@@ -131,7 +121,6 @@ const Technologies = () => {
                     </TabPanel>
                 </SwipeableViews>
             </div>
-        </MuiThemeProvider>
     );
 };
 

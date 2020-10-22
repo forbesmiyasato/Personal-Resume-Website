@@ -3,6 +3,8 @@ title: Advanced Java Semester-Long Project
 date: "10-21-2020"
 languages: "Java"
 order: 5
+button: "Github Repo"
+href: "https://github.com/forbesmiyasato/PortlandStateJavaSummer2020"
 ---
 
 Semester-long, multi-part phone bill application project that supports features such as creating and storing

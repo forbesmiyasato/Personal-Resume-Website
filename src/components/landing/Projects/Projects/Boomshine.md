@@ -3,6 +3,8 @@ title: Boomshine
 date: "10-21-2020"
 languages: "Java"
 order: 6
+button: "View Demo"
+href: "https://drive.google.com/file/d/1ykTlg7kum8lAwupLQby3__j0EbKFE0ml/view?usp=sharing"
 ---
 
 Boomshine Android game developed as the final project for my Java & Android programming class. Was given a 4 day time limit and worked with one partner.

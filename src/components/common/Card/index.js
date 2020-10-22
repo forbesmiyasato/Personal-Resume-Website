@@ -7,7 +7,5 @@ export const Card = styled.div`
 `;
 
 export const TitleWrap = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: inline-block;
 `;

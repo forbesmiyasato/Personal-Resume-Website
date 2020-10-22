@@ -5,10 +5,10 @@
     p:last-of-type {
         margin-bottom: 0;
     }
-    
+
     &::-webkit-scrollbar {
         width: 1rem;
-        -webkit-overflow-scrolling: auto
+        -webkit-overflow-scrolling: auto;
     }
 
     &::-webkit-scrollbar-track {
@@ -25,4 +25,10 @@
     &::-webkit-scrollbar-thumb:hover {
         background-color: #a8bbbf;
     }
+}
+
+.project-footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 }
