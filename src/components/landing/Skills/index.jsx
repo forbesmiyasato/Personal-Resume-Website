@@ -44,7 +44,7 @@ export const Skills = () => {
                                 <h1>About me</h1>
                             </Link>
                             <Link style={{cursor: 'pointer'}} color="inherit" onClick={topSkillsClicked}>
-                                Technologies
+                                Tech
                             </Link>
                             <Link style={{cursor: 'pointer'}} color="inherit" onClick={hobbyClicked}>
                                 Hobbies
@@ -81,7 +81,7 @@ export const Skills = () => {
                                 About Me
                             </Link>
                             <Link color="inherit" onClick={topSkillsClicked}>
-                                <h1>Technologies</h1>
+                                <h1>Tech</h1>
                             </Link>
                             <Link style={{cursor: 'pointer'}} color="inherit" onClick={hobbyClicked}>
                                 Hobbies
@@ -106,7 +106,7 @@ export const Skills = () => {
                                 About Me
                             </Link>
                             <Link style={{cursor: 'pointer'}} color="inherit" onClick={topSkillsClicked}>
-                                Technologies
+                                Tech
                             </Link>
                             <Link color="inherit" onClick={hobbyClicked}>
                                 <h1>Hobbies</h1>
