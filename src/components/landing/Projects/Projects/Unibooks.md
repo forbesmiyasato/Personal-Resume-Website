@@ -1,7 +1,7 @@
 ---
 title: Unibooks
 date: "10-21-2020"
-languages: "JavaScript, Python"
+languages: "Python, JavaScript"
 order: 1
 ---
 

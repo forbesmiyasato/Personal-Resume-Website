@@ -1,8 +1,14 @@
 .project-content {
     height: 120px;
     overflow-y: auto;
+
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+    
     &::-webkit-scrollbar {
-        width: 20px;
+        width: 1rem;
+        -webkit-overflow-scrolling: auto
     }
 
     &::-webkit-scrollbar-track {

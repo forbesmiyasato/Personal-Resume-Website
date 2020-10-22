@@ -1,7 +1,7 @@
 ---
 title: Covid-19 County Data Dashboard
 date: "10-21-2020"
-languages: "JavaScript"
+languages: "JavaScript, JSX"
 order: 4
 ---
 
