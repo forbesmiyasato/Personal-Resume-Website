@@ -2,20 +2,26 @@ import React, { useContext, useState } from "react";
 import { ThemeContext } from "providers/ThemeProvider";
 import { Container } from "components/common";
 import about from "assets/images/me_about.jpg";
-import tech from "assets/images/me_tech.jpeg";
+import tech from "assets/images/me_tech.png";
 import hobby from "assets/images/me_hobby.jpg";
 import { SkillsWrapper, Details, Thumbnail } from "./styles";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import Link from "@material-ui/core/Link";
 import Technologies from "./technologies";
 import Button from "@material-ui/core/Button";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const AboutSection = () => {
     const { theme } = useContext(ThemeContext);
     const [state, setState] = useState("general");
+    const [techClicked, setTechClicked] = useState(false);
+    const [hobbiesClicked, setHobbyClicked] = useState(false);
 
     const topSkillsClicked = () => {
         setState("skills");
+        if (!techClicked) {
+            setTechClicked(true);
+        }
     };
 
     const backToGeneral = () => {
@@ -24,6 +30,10 @@ const AboutSection = () => {
 
     const hobbyClicked = () => {
         setState("hobby");
+        if (!hobbiesClicked) {
+            setHobbyClicked(true);
+            setTechClicked(true);
+        }
     };
 
     return (
@@ -42,13 +52,20 @@ const AboutSection = () => {
                             <Link color="inherit" onClick={backToGeneral}>
                                 <h1>About me</h1>
                             </Link>
-                            <Link
-                                style={{ cursor: "pointer" }}
-                                color="inherit"
-                                onClick={topSkillsClicked}
+                            <Tooltip
+                                title="You can click me!"
+                                placement="top"
+                                arrow
+                                open={techClicked === false ? true : null}
                             >
-                                Tech
-                            </Link>
+                                <Link
+                                    style={{ cursor: "pointer" }}
+                                    color="inherit"
+                                    onClick={topSkillsClicked}
+                                >
+                                    Tech
+                                </Link>
+                            </Tooltip>
                             <Link
                                 style={{ cursor: "pointer" }}
                                 color="inherit"
@@ -68,7 +85,9 @@ const AboutSection = () => {
                             href="/files/Forbes_Miyasato_Resume.pdf"
                             target="_blank"
                         >
-                            <Button variant="contained" color="primary">View Resume</Button>
+                            <Button variant="contained" color="primary">
+                                View Resume
+                            </Button>
                         </a>
                     </Details>
                 </SkillsWrapper>
@@ -94,13 +113,22 @@ const AboutSection = () => {
                             <Link color="inherit" onClick={topSkillsClicked}>
                                 <h1>Tech</h1>
                             </Link>
-                            <Link
-                                style={{ cursor: "pointer" }}
-                                color="inherit"
-                                onClick={hobbyClicked}
+                            <Tooltip
+                                title="And me too!"
+                                placement="top"
+                                arrow
+                                open={
+                                    techClicked && !hobbiesClicked ? true : null
+                                }
                             >
-                                Hobbies
-                            </Link>
+                                <Link
+                                    style={{ cursor: "pointer" }}
+                                    color="inherit"
+                                    onClick={hobbyClicked}
+                                >
+                                    Hobbies
+                                </Link>
+                            </Tooltip>
                         </Breadcrumbs>
                         <Technologies />
                     </Details>
@@ -136,7 +164,7 @@ const AboutSection = () => {
                             </Link>
                         </Breadcrumbs>
                         <p className="section-box">
-                            I love to play basketball and workout.
+                            I enjoy playing basketball and going to the gym.
                         </p>
                     </Details>
                 </SkillsWrapper>
@@ -145,4 +173,4 @@ const AboutSection = () => {
     );
 };
 
-export default AboutSection
+export default AboutSection;

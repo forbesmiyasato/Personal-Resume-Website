@@ -8,18 +8,20 @@ const LoopingText = () => {
             <h4 className="loop-text">
                 <Typewriter
                     options={{
+                        deleteSpeed: 20,
+                        delay: 50,
                         loop: true,
                     }}
                     onInit={(typewriter) => {
                         typewriter
                             .typeString("I'm an aspiring software engineer!")
-                            .pauseFor(1000)
+                            .pauseFor(1500)
                             .deleteChars(30)
                             .typeString("pursuing a M.S. CS at PSU.")
-                            .pauseFor(1000)
+                            .pauseFor(1500)
                             .deleteChars(26)
                             .typeString("a full-stack development enthusiast.")
-                            .pauseFor(1000)
+                            .pauseFor(1500)
                             .start();
                     }}
                 />

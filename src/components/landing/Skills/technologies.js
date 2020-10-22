@@ -67,7 +67,7 @@ const Technologies = () => {
 
     const Icon = (i, name, src) => {
         return (
-            <Tooltip title={name} enterTouchDelay='50'>
+            <Tooltip title={name} enterTouchDelay='50' arrow>
                 <li key={i} className="skills-list-item">
                     <img height={"36"} width={"36"} src={src} />
                 </li>
