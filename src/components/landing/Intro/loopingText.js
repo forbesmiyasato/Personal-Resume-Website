@@ -14,6 +14,7 @@ const LoopingText = () => {
                     }}
                     onInit={(typewriter) => {
                         typewriter
+                            .pauseFor(1500)
                             .typeString("I'm an aspiring software engineer!")
                             .pauseFor(1500)
                             .deleteChars(30)

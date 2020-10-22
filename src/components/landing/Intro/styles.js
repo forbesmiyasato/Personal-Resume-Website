@@ -3,7 +3,7 @@ import overlayIllustration from "assets/illustrations/overlay.svg";
 import blobIllustration from "assets/illustrations/blob-bg.svg";
 
 export const IntroWrapper = styled.div`
-    height: 100vh;
+    min-height: 100vh;
     padding-bottom: 4rem;
     background-image: url(${overlayIllustration});
     background-size: contain;

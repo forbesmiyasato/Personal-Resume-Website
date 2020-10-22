@@ -1,5 +1,5 @@
 module.exports = {
-  defaultTitle: "Forbes Miyasato's resume",
+  defaultTitle: "Forbes Miyasato's Resume",
   logo: 'https://forbesmiyasato/favicon/favicon.png',
   author: 'Forbes Miyasato',
   url: 'https://forbesmiyasato.com',

@@ -7,6 +7,7 @@ import dev from "assets/illustrations/dev.svg";
 import Button from "@material-ui/core/Button";
 import { Wrapper, IntroWrapper, Details, Thumbnail } from "./styles";
 import LoopText from './loopingText'
+import IntroText from './introText'
 
 export const Intro = () => {
     const { theme } = useContext(ThemeContext);
@@ -17,9 +18,7 @@ export const Intro = () => {
             <IntroWrapper>
                 <Wrapper as={Container}>
                     <Details theme={theme}>
-                        <h1>
-                            Hi There! <br /> My name is Forbes Miyasato.
-                        </h1>
+                        <IntroText />
                         <LoopText />
                         <AnchorLink href="#projects">
                             <Button variant="contained" color="primary">

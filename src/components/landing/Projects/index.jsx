@@ -45,11 +45,9 @@ export const Projects = () => {
         }
     );
 
-    console.log(data);
-    console.log(transitions);
-
     return (
         <VizSensor
+            partialVisibility={true}
             onChange={(isVisible) => {
                 if (isVisible) {
                     set(true);
@@ -58,15 +56,13 @@ export const Projects = () => {
         >
             <Wrapper as={Container} id="projects">
                 <h1>Projects</h1>
-                <Grid>
+                <Grid className="project-grid">
                     {transitions.length > 0 &&
-                        transitions.map(({item, key, props}) => (
+                        transitions.map(({ item, key, props }) => (
                             <Item key={key} theme={theme} style={{ ...props }}>
                                 <Card theme={theme}>
                                     <Content>
-                                        <h4>
-                                            {item.node.frontmatter.title}
-                                        </h4>
+                                        <h4>{item.node.frontmatter.title}</h4>
                                         <div
                                             className="project-content"
                                             dangerouslySetInnerHTML={{
@@ -76,19 +72,14 @@ export const Projects = () => {
                                     </Content>
                                     <div className="project-footer">
                                         <a
-                                            href={
-                                                item.node.frontmatter.href
-                                            }
+                                            href={item.node.frontmatter.href}
                                             target="_blank"
                                         >
                                             <Button
                                                 variant="contained"
                                                 color="primary"
                                             >
-                                                {
-                                                    item.node.frontmatter
-                                                        .button
-                                                }
+                                                {item.node.frontmatter.button}
                                             </Button>
                                         </a>
                                         <TitleWrap>
