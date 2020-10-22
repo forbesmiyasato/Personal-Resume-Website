@@ -1,6 +1,7 @@
 .project-content {
     height: 120px;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 
     p:last-of-type {
         margin-bottom: 0;

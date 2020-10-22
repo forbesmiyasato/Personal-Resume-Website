@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { ThemeContext } from "providers/ThemeProvider";
-import { Container, Button } from "components/common";
+import { Container } from "components/common";
 import about from "assets/images/me_about.jpg";
 import tech from "assets/images/me_tech.jpeg";
 import hobby from "assets/images/me_hobby.jpg";
@@ -8,6 +8,7 @@ import { SkillsWrapper, Details, Thumbnail } from "./styles";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import Link from "@material-ui/core/Link";
 import Technologies from "./technologies";
+import Button from "@material-ui/core/Button";
 
 const AboutSection = () => {
     const { theme } = useContext(ThemeContext);
@@ -67,7 +68,7 @@ const AboutSection = () => {
                             href="/files/Forbes_Miyasato_Resume.pdf"
                             target="_blank"
                         >
-                            <Button>View Resume</Button>
+                            <Button variant="contained" color="primary">View Resume</Button>
                         </a>
                     </Details>
                 </SkillsWrapper>

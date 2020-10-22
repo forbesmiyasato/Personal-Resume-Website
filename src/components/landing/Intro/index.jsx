@@ -2,10 +2,11 @@ import React, { useContext } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { ThemeContext } from "providers/ThemeProvider";
 import { Header } from "components/theme";
-import { Container, Button } from "components/common";
+import { Container } from "components/common";
 import dev from "assets/illustrations/dev.svg";
-import blobOverlay from "assets/illustrations/overlay.svg";
+import Button from "@material-ui/core/Button";
 import { Wrapper, IntroWrapper, Details, Thumbnail } from "./styles";
+import LoopText from './loopingText'
 
 export const Intro = () => {
     const { theme } = useContext(ThemeContext);
@@ -19,11 +20,12 @@ export const Intro = () => {
                         <h1>
                             Hi There! <br /> My name is Forbes Miyasato.
                         </h1>
-                        {/* <h1>My name is Forbes Miyasato.</h1> */}
-                        <h4>I’m an aspiring software engineer.</h4>
-                        <Button as={AnchorLink} href="#projects">
-                            Learn more
-                        </Button>
+                        <LoopText />
+                        <AnchorLink href="#projects">
+                            <Button variant="contained" color="primary">
+                                Learn More About Me
+                            </Button>
+                        </AnchorLink>
                     </Details>
                     <Thumbnail theme={theme}>
                         <img
