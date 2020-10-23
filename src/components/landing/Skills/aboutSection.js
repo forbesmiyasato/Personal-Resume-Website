@@ -47,6 +47,7 @@ const AboutSection = () => {
         opacity: open ? 1 : 0,
         transform:
             open ? "translateY(0px)" : "translateY(50px)",
+        config: { duration: 250 }
     });
 
     return (

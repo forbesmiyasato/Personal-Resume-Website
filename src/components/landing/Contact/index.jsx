@@ -13,7 +13,7 @@ export const Contact = () => {
     const { theme } = useContext(ThemeContext);
 
     return (
-        <InsightFloatIn topOffSet={300}>
+        <InsightFloatIn topOffSet={200} translateY={50}>
             <Wrapper as={Container} id="contact">
                 <Details className="contact-wrapper">
                     <h1>Let's get in touch</h1>
@@ -37,6 +37,7 @@ export const Contact = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={`follow me on ${name}`}
+                                    className="contact-icon-anchor"
                                 >
                                     {theme === "light" ? (
                                         <img width="24" src={icon} alt={name} />

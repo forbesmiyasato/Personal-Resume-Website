@@ -6,7 +6,8 @@ const InsightFloatIn = (props) => {
     const [open, set] = useState(false);
     const prop = useSpring({
         opacity: open || props.disable ? 1 : 0,
-        transform: open || props.disable ? "translateY(0px)" : "translateY(50px)",
+        transform: open || props.disable ? "translateY(0px)" : `translateY(${props.translateY}px)`,
+        config: { duration: 250 }
     });
 
     return (

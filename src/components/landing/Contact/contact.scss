@@ -9,7 +9,6 @@
     }
 
     & a {
-
         &.mail-icon {
             border-radius: 50%;
             background: #30c9e8;
@@ -25,6 +24,12 @@
             & svg {
                 font-size: 1.5rem;
             }
+        }
+
+        &.contact-icon-anchor {
+            width: 32px;
+            height: 32px;
+            margin: 0 auto;
         }
     }
 

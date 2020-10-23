@@ -29,7 +29,7 @@ export const Details = styled.div`
   margin: 0 auto;
   h2,
   a,
-  span {
+  span.copyright-text {
     color: #212121;
   }
   @media (max-width: 680px) {
