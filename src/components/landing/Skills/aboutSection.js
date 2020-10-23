@@ -10,6 +10,8 @@ import Link from "@material-ui/core/Link";
 import Technologies from "./technologies";
 import Button from "@material-ui/core/Button";
 import Tooltip from "@material-ui/core/Tooltip";
+import InsightFloatIn from "../../common/InsightFloatIn";
+import TechTooltip from "./techTooltip";
 
 const AboutSection = () => {
     const { theme } = useContext(ThemeContext);
@@ -39,67 +41,63 @@ const AboutSection = () => {
     return (
         <>
             {state === "general" && (
-                <SkillsWrapper as={Container}>
-                    <Thumbnail>
-                        <img
-                            className={"profile-pic"}
-                            src={about}
-                            alt="About Forbes"
-                        />
-                    </Thumbnail>
-                    <Details theme={theme}>
-                        <Breadcrumbs aria-label="breadcrumb">
-                            <Link color="inherit" onClick={backToGeneral}>
-                                <h1>About me</h1>
-                            </Link>
-                            <Tooltip
-                                title="You can click me!"
-                                placement="top"
-                                arrow
-                                open={techClicked === false ? true : null}
-                            >
+                <InsightFloatIn topOffSet={300}>
+                    <SkillsWrapper as={Container}>
+                        <Thumbnail>
+                            <div className="image-wrapper">
+                                <img
+                                    className={"profile-pic"}
+                                    src={about}
+                                    alt="About Forbes"
+                                />
+                            </div>
+                        </Thumbnail>
+                        <Details theme={theme}>
+                            <Breadcrumbs aria-label="breadcrumb">
+                                <Link color="inherit" onClick={backToGeneral}>
+                                    <h1>About me</h1>
+                                </Link>
+                                <TechTooltip
+                                    show={techClicked === false ? true : null}
+                                    topSkillsClicked={topSkillsClicked}
+                                />
                                 <Link
                                     style={{ cursor: "pointer" }}
                                     color="inherit"
-                                    onClick={topSkillsClicked}
+                                    onClick={hobbyClicked}
                                 >
-                                    Tech
+                                    Hobbies
                                 </Link>
-                            </Tooltip>
-                            <Link
-                                style={{ cursor: "pointer" }}
-                                color="inherit"
-                                onClick={hobbyClicked}
+                            </Breadcrumbs>
+                            <p className="section-box">
+                                I am a 2020 graduate of Pacific University with
+                                a degree in Computer Science and currently
+                                pursuing a Masters of Computer Science at
+                                Portland State University. I'm passionate about
+                                software engineering and full-stack development.
+                            </p>
+                            <a
+                                href="/files/Forbes_Miyasato_Resume.pdf"
+                                target="_blank"
                             >
-                                Hobbies
-                            </Link>
-                        </Breadcrumbs>
-                        <p className="section-box">
-                            I am a 2020 graduate of Pacific University with a
-                            degree in Computer Science and currently pursuing a
-                            Masters of Computer Science at Portland State
-                            University. I'm passionate about software
-                            engineering and full-stack development.
-                        </p>
-                        <a
-                            href="/files/Forbes_Miyasato_Resume.pdf"
-                            target="_blank"
-                        >
-                            <Button variant="contained" color="primary">
-                                View Resume
-                            </Button>
-                        </a>
-                    </Details>
-                </SkillsWrapper>
+                                <Button variant="contained" color="primary">
+                                    View Resume
+                                </Button>
+                            </a>
+                        </Details>
+                    </SkillsWrapper>
+                </InsightFloatIn>
             )}
             {state === "skills" && (
                 <SkillsWrapper as={Container}>
                     <Thumbnail>
-                        <img
-                            className={"profile-pic"}
-                            src={tech}
-                            alt="About Forbes"
-                        />
+                        <div class="image-wrapper">
+                            <img
+                                className={"profile-pic"}
+                                src={tech}
+                                alt="About Forbes"
+                            />
+                        </div>
                     </Thumbnail>
                     <Details theme={theme}>
                         <Breadcrumbs aria-label="breadcrumb">
@@ -137,11 +135,13 @@ const AboutSection = () => {
             {state === "hobby" && (
                 <SkillsWrapper as={Container}>
                     <Thumbnail>
-                        <img
-                            className={"profile-pic"}
-                            src={hobby}
-                            alt="About Forbes"
-                        />
+                        <div class="image-wrapper">
+                            <img
+                                className={"profile-pic"}
+                                src={hobby}
+                                alt="About Forbes"
+                            />
+                        </div>
                     </Thumbnail>
                     <Details theme={theme}>
                         <Breadcrumbs aria-label="breadcrumb">

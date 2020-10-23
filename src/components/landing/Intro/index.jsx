@@ -6,11 +6,21 @@ import { Container } from "components/common";
 import dev from "assets/illustrations/dev.svg";
 import Button from "@material-ui/core/Button";
 import { Wrapper, IntroWrapper, Details, Thumbnail } from "./styles";
-import LoopText from './loopingText'
-import IntroText from './introText'
+import LoopText from "./loopingText";
+import IntroText from "./introText";
+import { useSpring, animated } from "react-spring";
 
 export const Intro = () => {
     const { theme } = useContext(ThemeContext);
+
+    const button = useSpring({
+        to: {
+            opacity: 1,
+            transform: "translateY(0)",
+        },
+        from: { opacity: 0, transform: "translateY(200px)" },
+        delay: 2400
+    });
 
     return (
         <>
@@ -21,9 +31,11 @@ export const Intro = () => {
                         <IntroText />
                         <LoopText />
                         <AnchorLink href="#projects">
-                            <Button variant="contained" color="primary">
-                                Learn More About Me
-                            </Button>
+                            <animated.div style={button}>
+                                <Button variant="contained" color="primary">
+                                    Learn More About Me
+                                </Button>
+                            </animated.div>
                         </AnchorLink>
                     </Details>
                     <Thumbnail theme={theme}>

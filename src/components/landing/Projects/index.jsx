@@ -4,12 +4,16 @@ import { ThemeContext } from "providers/ThemeProvider";
 import { Container, Card, TitleWrap } from "components/common";
 import { Wrapper, Grid, Item, Content, Stats, Languages } from "./styles";
 import Button from "@material-ui/core/Button";
-import { useTransition, useSpring, useChain, config } from "react-spring";
+import { useTransition } from "react-spring";
 import VizSensor from "react-visibility-sensor";
+// import { SEO, InsightFloatIn } from "../../common";
+import InsightFloatIn from "../../common/InsightFloatIn";
 import "./project.scss";
 
 export const Projects = () => {
+    console.log(InsightFloatIn);
     const { theme } = useContext(ThemeContext);
+    const [open, set] = useState(false);
     const data = useStaticQuery(graphql`
         query {
             allMarkdownRemark(
@@ -32,8 +36,6 @@ export const Projects = () => {
         }
     `);
 
-    const [open, set] = useState(false);
-
     const transitions = useTransition(
         open ? data.allMarkdownRemark.edges : [],
         (item, i) => i,
@@ -45,9 +47,12 @@ export const Projects = () => {
         }
     );
 
+    console.log(open);
+
     return (
         <VizSensor
             partialVisibility={true}
+            minTopValue={300}
             onChange={(isVisible) => {
                 if (isVisible) {
                     set(true);
@@ -55,7 +60,9 @@ export const Projects = () => {
             }}
         >
             <Wrapper as={Container} id="projects">
-                <h1>Projects</h1>
+                <InsightFloatIn>
+                    <h1>Projects</h1>
+                </InsightFloatIn>
                 <Grid className="project-grid">
                     {transitions.length > 0 &&
                         transitions.map(({ item, key, props }) => (

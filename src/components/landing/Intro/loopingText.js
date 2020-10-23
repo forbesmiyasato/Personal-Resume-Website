@@ -9,12 +9,12 @@ const LoopingText = () => {
                 <Typewriter
                     options={{
                         deleteSpeed: 20,
-                        delay: 50,
+                        delay: 30,
                         loop: true,
                     }}
                     onInit={(typewriter) => {
                         typewriter
-                            .pauseFor(1500)
+                            .pauseFor(900)
                             .typeString("I'm an aspiring software engineer!")
                             .pauseFor(1500)
                             .deleteChars(30)

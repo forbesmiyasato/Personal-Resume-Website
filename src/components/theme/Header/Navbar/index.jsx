@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
-import { Link } from 'gatsby';
 import { ThemeContext } from 'providers/ThemeProvider';
 import { Container } from 'components/common';
 import NavbarLinks from '../NavbarLinks';
-import { NavWrapper, Wrapper, Links} from './styles';
+import { Wrapper, Links} from './styles';
 import social from '../../../social.json';
 
 const Navbar = () => {

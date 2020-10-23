@@ -16,7 +16,7 @@ const IntroText = () => {
             transform: "translateX(0)",
         },
         from: { opacity: 0, transform: "translateX(-200px)" },
-        delay: 1000
+        delay: 500
     });
 
     return (

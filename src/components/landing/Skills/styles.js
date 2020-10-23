@@ -74,6 +74,8 @@ export const Thumbnail = styled.div`
 
     @media (max-width: 960px) {
         width: 100%;
+        max-width: 400px;
+        height: 400px;
         margin-bottom: 2rem;
     }
 
