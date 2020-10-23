@@ -48,7 +48,7 @@ This project is currently feature complete and not looking for collaborators.
 ### Acknowledgements <g-emoji class="g-emoji" alias="blue_heart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f499.png">💙</g-emoji>
 <hr>
 
-This project is based on gatsby-portfolio-dev (https://github.com/smakosh/gatsby-portfolio-dev). Thank you @Smakosh (https://smakosh.com) for your hard work.
+This project is based on gatsby-portfolio-dev (https://github.com/smakosh/gatsby-portfolio-dev) (https://portfolio.smakosh.com). Thank you @Smakosh (https://smakosh.com) for your hard work.
 
 Also, thank you all gatsby-portfolio-dev contributors for help providing this amazing gatsby starter.
 
