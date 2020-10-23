@@ -47,4 +47,12 @@ export const Thumbnail = styled.div`
     img {
         width: 100%;
     }
+
+    animation: animatedBackgroundContact 4s ease-in-out infinite alternate;
+
+    @keyframes animatedBackgroundContact {
+        0% { transform: translateY(-10px); }
+        50% { transform: translateY(20px); }
+        100% { transform: translateY(-10px); }
+    }
 `;

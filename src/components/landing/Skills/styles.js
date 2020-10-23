@@ -6,6 +6,14 @@ export const Wrapper = styled.div`
     background-size: contain;
     background-position: left top;
     background-repeat: no-repeat;
+
+    animation: animatedBackgroundAbout 4s ease-in-out infinite alternate;
+
+    @keyframes animatedBackgroundAbout {
+        0% { background-position-y: -20px; }
+        50% { background-position-y: 0px; }
+        100% { background-position-y: -20px; }
+    }
 `;
 
 export const SkillsWrapper = styled.div`

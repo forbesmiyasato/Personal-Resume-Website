@@ -17,6 +17,14 @@ export const IntroWrapper = styled.div`
         justify-content: normal;
         margin-bottom: -136px;
     }
+
+    animation: animatedBackgroundIntro 4s ease-in-out infinite alternate;
+
+    @keyframes animatedBackgroundIntro {
+        0% { background-position-y: 0; }
+        50% { background-position-y: -50px; }
+        100% { background-position-y: 0; }
+    }
 `;
 
 export const Wrapper = styled.div`
