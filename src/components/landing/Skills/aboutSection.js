@@ -10,8 +10,9 @@ import Link from "@material-ui/core/Link";
 import Technologies from "./technologies";
 import Button from "@material-ui/core/Button";
 import Tooltip from "@material-ui/core/Tooltip";
-import InsightFloatIn from "../../common/InsightFloatIn";
 import TechTooltip from "./techTooltip";
+import VizSensor from "react-visibility-sensor";
+import { useSpring, animated } from "react-spring";
 
 const AboutSection = () => {
     const { theme } = useContext(ThemeContext);
@@ -19,6 +20,7 @@ const AboutSection = () => {
     const [techClicked, setTechClicked] = useState(false);
     const [hobbiesClicked, setHobbyClicked] = useState(false);
     const [triggeredAnimated, setTriggeredAnimation] = useState(false);
+    const [open, set] = useState(false);
 
     const topSkillsClicked = () => {
         setState("skills");
@@ -41,55 +43,78 @@ const AboutSection = () => {
         }
     };
 
+    const prop = useSpring({
+        opacity: open ? 1 : 0,
+        transform:
+            open ? "translateY(0px)" : "translateY(50px)",
+    });
+
     return (
         <>
             {state === "general" && (
-                <InsightFloatIn topOffSet={300} disable={triggeredAnimated}>
-                    <SkillsWrapper as={Container}>
-                        <Thumbnail>
-                            <div className="image-wrapper">
-                                <img
-                                    className={"profile-pic"}
-                                    src={about}
-                                    alt="About Forbes"
-                                />
-                            </div>
-                        </Thumbnail>
-                        <Details theme={theme}>
-                            <Breadcrumbs aria-label="breadcrumb">
-                                <Link color="inherit" onClick={backToGeneral}>
-                                    <h1>About me</h1>
-                                </Link>
-                                <TechTooltip
-                                    show={techClicked === false ? true : null}
-                                    topSkillsClicked={topSkillsClicked}
-                                />
-                                <Link
-                                    style={{ cursor: "pointer" }}
-                                    color="inherit"
-                                    onClick={hobbyClicked}
+                <VizSensor
+                    partialVisibility={true}
+                    minTopValue={300}
+                    onChange={(isVisible) => {
+                        if (isVisible) {
+                            set(true);
+                        }
+                    }}
+                >
+                    <animated.div style={prop}>
+                        <SkillsWrapper as={Container}>
+                            <Thumbnail>
+                                <div className="image-wrapper">
+                                    <img
+                                        className={"profile-pic"}
+                                        src={about}
+                                        alt="About Forbes"
+                                    />
+                                </div>
+                            </Thumbnail>
+                            <Details theme={theme}>
+                                <Breadcrumbs aria-label="breadcrumb">
+                                    <Link
+                                        color="inherit"
+                                        onClick={backToGeneral}
+                                    >
+                                        <h1>About me</h1>
+                                    </Link>
+                                    <TechTooltip
+                                        show={
+                                            techClicked === false ? true : null
+                                        }
+                                        parentVisible={open}
+                                        topSkillsClicked={topSkillsClicked}
+                                    />
+                                    <Link
+                                        style={{ cursor: "pointer" }}
+                                        color="inherit"
+                                        onClick={hobbyClicked}
+                                    >
+                                        Hobbies
+                                    </Link>
+                                </Breadcrumbs>
+                                <p className="section-box">
+                                    I am a 2020 graduate of Pacific University
+                                    with a degree in Computer Science and
+                                    currently pursuing a Masters of Computer
+                                    Science at Portland State University. I'm
+                                    passionate about software engineering and
+                                    full-stack development.
+                                </p>
+                                <a
+                                    href="/files/Forbes_Miyasato_Resume.pdf"
+                                    target="_blank"
                                 >
-                                    Hobbies
-                                </Link>
-                            </Breadcrumbs>
-                            <p className="section-box">
-                                I am a 2020 graduate of Pacific University with
-                                a degree in Computer Science and currently
-                                pursuing a Masters of Computer Science at
-                                Portland State University. I'm passionate about
-                                software engineering and full-stack development.
-                            </p>
-                            <a
-                                href="/files/Forbes_Miyasato_Resume.pdf"
-                                target="_blank"
-                            >
-                                <Button variant="contained" color="primary">
-                                    View Resume
-                                </Button>
-                            </a>
-                        </Details>
-                    </SkillsWrapper>
-                </InsightFloatIn>
+                                    <Button variant="contained" color="primary">
+                                        View Resume
+                                    </Button>
+                                </a>
+                            </Details>
+                        </SkillsWrapper>
+                    </animated.div>
+                </VizSensor>
             )}
             {state === "skills" && (
                 <SkillsWrapper as={Container}>

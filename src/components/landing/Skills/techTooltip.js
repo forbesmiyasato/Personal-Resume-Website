@@ -7,16 +7,13 @@ const TechTooltip = (props) => {
     const [show, setShow] = useState(false);
     const [visible, setVisible] = useState(false);
     useEffect(() => {
-        if (visible) {
+        if (visible && props.parentVisible) {
             setTimeout(() => {
                 setShow(true);
             }, 1000);
         }
-    }, [visible]);
+    }, [visible, props.parentVisible]);
 
-    console.log("111", visible);
-    console.log(show);
-    console.log(props.show);
     return (
         <VizSensor
             onChange={(isVisible) => {
@@ -29,7 +26,7 @@ const TechTooltip = (props) => {
                 title="You can click me!"
                 placement="top"
                 arrow
-                open={props.show && show && visible}
+                open={props.show && show && visible && props.parentVisible}
             >
                 <Link
                     style={{ cursor: "pointer" }}

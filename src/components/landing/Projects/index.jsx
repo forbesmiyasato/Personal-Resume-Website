@@ -11,7 +11,6 @@ import InsightFloatIn from "../../common/InsightFloatIn";
 import "./project.scss";
 
 export const Projects = () => {
-    console.log(InsightFloatIn);
     const { theme } = useContext(ThemeContext);
     const [open, set] = useState(false);
     const data = useStaticQuery(graphql`
@@ -46,8 +45,6 @@ export const Projects = () => {
             leave: { opacity: 0, transform: "scale(0)" },
         }
     );
-
-    console.log(open);
 
     return (
         <VizSensor
