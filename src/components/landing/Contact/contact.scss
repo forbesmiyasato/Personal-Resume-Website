@@ -6,9 +6,13 @@
     & p {
         font-size: 1rem;
         margin-bottom: 1rem;
+        display: inline-block;
     }
 
     & a {
+        box-sizing: content-box;
+        transition: transform .2s ease-in-out;
+
         &.mail-icon {
             border-radius: 50%;
             background: #30c9e8;
@@ -30,6 +34,10 @@
             width: 32px;
             height: 32px;
             margin: 0 auto;
+        }
+
+        &:hover {
+            transform: scale(1.2);
         }
     }
 

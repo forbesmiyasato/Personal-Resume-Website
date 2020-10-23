@@ -12,7 +12,7 @@ const Navbar = () => {
     <Wrapper as={Container}>
         <Links>
         {social.map(({ id, name, link, icon, iconDark }) => (
-          <a key={id} href={link} target="_blank" rel="noopener noreferrer" aria-label={`follow me on ${name}`}>
+          <a key={id} className="header-icons" href={link} target="_blank" rel="noopener noreferrer" aria-label={`follow me on ${name}`}>
             {theme === 'light' 
             ? <img width="24" src={icon} alt={name} />
             : <img width="24" src={iconDark} alt={name} />

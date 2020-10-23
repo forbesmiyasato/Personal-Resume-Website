@@ -8,3 +8,34 @@
     object-position: top;
     box-shadow: 0 10px 30px 1px rgba(0, 0, 0, 0.3);
 }
+
+.header-icons {
+    box-sizing: content-box;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.contact-icon p span,
+.header-anchor-link {
+    position: relative;
+}
+
+.contact-icon p span:after,
+.header-anchor-link:after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #30c9e8;
+    width: 0;
+    position: absolute;
+    left: 0;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+.contact-icon a:hover + p span:after,
+.header-anchor-link:hover:after {
+    width: 100%;
+}

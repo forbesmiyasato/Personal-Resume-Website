@@ -18,7 +18,7 @@ export const Contact = () => {
                 <Details className="contact-wrapper">
                     <h1>Let's get in touch</h1>
                     <div className="contact-text-wrapper">
-                        <div>
+                        <div className="contact-icon">
                             <a
                                 className="mail-icon"
                                 href="mailto:forbesmiyasato@yahoo.com"
@@ -27,10 +27,10 @@ export const Contact = () => {
                             >
                                 <FontAwesomeIcon icon={faEnvelope} />
                             </a>
-                            <p>forbesmiyasato@yahoo.com</p>
+                            <p><span>forbesmiyasato@yahoo.com</span></p>
                         </div>
                         {social.map(({ id, name, link, icon, iconDark }) => (
-                            <div key={id} className="contact-social-icon">
+                            <div key={id} className="contact-social-icon contact-icon">
                                 <a
                                     key={id}
                                     href={link}
@@ -49,7 +49,7 @@ export const Contact = () => {
                                         />
                                     )}
                                 </a>
-                                <p>{name}</p>
+                                <p><span>{name}</span></p>
                             </div>
                         ))}
                     </div>
