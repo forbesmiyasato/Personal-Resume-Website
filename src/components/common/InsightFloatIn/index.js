@@ -5,8 +5,8 @@ import VizSensor from "react-visibility-sensor";
 const InsightFloatIn = (props) => {
     const [open, set] = useState(false);
     const prop = useSpring({
-        opacity: open ? 1 : 0,
-        transform: open ? "translateY(0px)" : "translateY(50px)",
+        opacity: open || props.disable ? 1 : 0,
+        transform: open || props.disable ? "translateY(0px)" : "translateY(50px)",
     });
 
     return (
@@ -14,7 +14,7 @@ const InsightFloatIn = (props) => {
             partialVisibility={true}
             minTopValue={props.topOffSet}
             onChange={(isVisible) => {
-                if (isVisible) {
+                if (isVisible && !props.disable) {
                     set(true);
                 }
             }}

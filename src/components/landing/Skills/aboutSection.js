@@ -18,11 +18,13 @@ const AboutSection = () => {
     const [state, setState] = useState("general");
     const [techClicked, setTechClicked] = useState(false);
     const [hobbiesClicked, setHobbyClicked] = useState(false);
+    const [triggeredAnimated, setTriggeredAnimation] = useState(false);
 
     const topSkillsClicked = () => {
         setState("skills");
         if (!techClicked) {
             setTechClicked(true);
+            setTriggeredAnimation(true);
         }
     };
 
@@ -35,13 +37,14 @@ const AboutSection = () => {
         if (!hobbiesClicked) {
             setHobbyClicked(true);
             setTechClicked(true);
+            setTriggeredAnimation(true);
         }
     };
 
     return (
         <>
             {state === "general" && (
-                <InsightFloatIn topOffSet={300}>
+                <InsightFloatIn topOffSet={300} disable={triggeredAnimated}>
                     <SkillsWrapper as={Container}>
                         <Thumbnail>
                             <div className="image-wrapper">

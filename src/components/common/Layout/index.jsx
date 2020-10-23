@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from 'providers/ThemeProvider';
-import { Footer } from 'components/theme';
+import { Footer } from '../../theme/Footer';
 import { Global } from './styles';
 import './fonts.css';
 
