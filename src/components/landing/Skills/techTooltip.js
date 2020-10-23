@@ -10,7 +10,7 @@ const TechTooltip = (props) => {
         if (visible && props.parentVisible) {
             setTimeout(() => {
                 setShow(true);
-            }, 1000);
+            }, 500);
         }
     }, [visible, props.parentVisible]);
 

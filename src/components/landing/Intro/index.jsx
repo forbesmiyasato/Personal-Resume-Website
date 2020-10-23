@@ -31,7 +31,7 @@ export const Intro = () => {
                         <IntroText />
                         <LoopText />
                         <AnchorLink href="#projects">
-                            <animated.div style={button}>
+                            <animated.div className="learn-more-btn" style={button}>
                                 <Button variant="contained" color="primary">
                                     Learn More About Me
                                 </Button>

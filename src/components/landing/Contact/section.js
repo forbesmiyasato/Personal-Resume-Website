@@ -1,19 +1,14 @@
-import React, { useContext } from "react";
-import { Container } from "components/common";
-import contact from "assets/illustrations/contact.svg";
+import React, { useContext, useState } from "react";
 import { ThemeContext } from "providers/ThemeProvider";
-import { Wrapper, Details, Thumbnail } from "./styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import social from "../../social.json";
-import InsightFloatIn from "../../common/InsightFloatIn";
 import { Trail, animated } from "react-spring/renderprops";
 import VizSensor from "react-visibility-sensor";
-import GITSectionfrom from "./section";
-import "./contact.scss";
 
-export const Contact = () => {
+const GITSection = () => {
     const { theme } = useContext(ThemeContext);
+    const [open, set] = useState(false);
 
     const items = [
         <div className="contact-icon">
@@ -52,15 +47,33 @@ export const Contact = () => {
     ];
 
     return (
-        <InsightFloatIn topOffSet={200} translateY={50}>
-            <Wrapper as={Container} id="contact">
-                <Details className="contact-wrapper">
-                    <GITSectionfrom />
-                </Details>
-                <Thumbnail>
-                    <img src={contact} alt="Contact Forbes" />
-                </Thumbnail>
-            </Wrapper>
-        </InsightFloatIn>
+        <>
+            <VizSensor
+                onChange={(isVisible) => {
+                    if (isVisible) {
+                        set(true);
+                    }
+                }}
+            >
+                <h1>Let's get in touch</h1>
+            </VizSensor>
+            {open && (
+                <div className="contact-text-wrapper">
+                    <Trail
+                        config={{ delay: 300 }}
+                        items={items}
+                        keys={(item) => item.key}
+                        from={{ opacity: 0 }}
+                        to={{ opacity: 1, delay: 1000 }}
+                    >
+                        {(item) => (props) => (
+                            <animated.div style={props}>{item}</animated.div>
+                        )}
+                    </Trail>
+                </div>
+            )}
+        </>
     );
 };
+
+export default GITSection;
