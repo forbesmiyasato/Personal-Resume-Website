@@ -11,6 +11,7 @@ export const Footer = () => {
 
     return (
         <VizSensor
+        minTopValue={200}
         partialVisibility={true}
             onChange={(isVisible) => {
                 if (isVisible & !shown) {
