@@ -21,7 +21,6 @@ export const Contact = () => {
             partialVisibility={true}
             minTopValue={200}
             onChange={(isVisible) => {
-                console.log("Triggered", isVisible)
                 if (isVisible && !open) {
                     set(true);
                 }
@@ -29,7 +28,7 @@ export const Contact = () => {
         >
             <animated.div style={prop}>
                 <Wrapper as={Container} id="contact">
-                    <Details className="contact-wrapper">
+                    <Details open={open} className="contact-wrapper">
                         <GITSectionfrom show={open}/>
                     </Details>
                     <Thumbnail>

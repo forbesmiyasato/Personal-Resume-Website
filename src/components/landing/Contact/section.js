@@ -11,7 +11,6 @@ const GITSection = (props) => {
     const [open, set] = useState(false);
     // const [parentOpenned, setParentOpenned] = useState(false);
     // useEffect(() => {
-    //     console.log("Effect", props.show, parentOpenned)
     //     if (props.show && !parentOpenned) {
     //         setParentOpenned(true)
     //     }
@@ -53,7 +52,6 @@ const GITSection = (props) => {
         )),
     ];
 
-    console.log('rerender');
     return (
         <>
             <VizSensor
