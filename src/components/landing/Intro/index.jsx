@@ -41,7 +41,7 @@ export const Intro = () => {
                     <Thumbnail theme={theme}>
                         <img
                             src={dev}
-                            alt="I'm Forbes and this is my portfolio website"
+                            alt="I'm Forbes and this is my resume website"
                         />
                     </Thumbnail>
                 </Wrapper>

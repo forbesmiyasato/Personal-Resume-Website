@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "private": true,
-  "description": "Forbes Miyasato Portfolio",
+  "description": "Forbes Miyasato's Resume",
   "version": "0.1.2",
   "author": "Forbes <forbesmiyasato@yahoo.com>",
   "dependencies": {
@@ -48,7 +48,11 @@
   "keywords": [
     "gatsby",
     "portfolio",
-    "developer"
+    "developer",
+    "react",
+    "resume",
+    "full-stack",
+    "software engineer"
   ],
   "license": "MIT",
   "scripts": {

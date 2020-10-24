@@ -104,6 +104,7 @@ const AboutSection = () => {
                                 <a
                                     href="/files/Forbes_Miyasato_Resume.pdf"
                                     target="_blank"
+                                    rel="nofollow"
                                 >
                                     <Button variant="contained" color="primary">
                                         View Resume

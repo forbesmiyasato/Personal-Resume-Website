@@ -9,7 +9,6 @@ import GITSectionfrom from "./section";
 import "./contact.scss";
 
 export const Contact = () => {
-    const { theme } = useContext(ThemeContext);
     const [open, set] = useState(false);
     const prop = useSpring({
         opacity: open ? 1 : 0,
@@ -17,7 +16,6 @@ export const Contact = () => {
         config: { duration: 250 },
     });
 
-    console.log(open);
     return (
         <VizSensor
             partialVisibility={true}
