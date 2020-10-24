@@ -60,11 +60,11 @@ const GITSection = () => {
             {open && (
                 <div className="contact-text-wrapper">
                     <Trail
-                        config={{ delay: 300 }}
+                        config={{ delay: 500 }}
                         items={items}
                         keys={(item) => item.key}
                         from={{ opacity: 0 }}
-                        to={{ opacity: 1, delay: 1000 }}
+                        to={{ opacity: 1 }}
                     >
                         {(item) => (props) => (
                             <animated.div style={props}>{item}</animated.div>
