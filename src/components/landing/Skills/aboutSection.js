@@ -19,14 +19,12 @@ const AboutSection = () => {
     const [state, setState] = useState("general");
     const [techClicked, setTechClicked] = useState(false);
     const [hobbiesClicked, setHobbyClicked] = useState(false);
-    const [triggeredAnimated, setTriggeredAnimation] = useState(false);
     const [open, set] = useState(false);
 
     const topSkillsClicked = () => {
         setState("skills");
         if (!techClicked) {
             setTechClicked(true);
-            setTriggeredAnimation(true);
         }
     };
 
@@ -39,7 +37,6 @@ const AboutSection = () => {
         if (!hobbiesClicked) {
             setHobbyClicked(true);
             setTechClicked(true);
-            setTriggeredAnimation(true);
         }
     };
 
@@ -57,7 +54,7 @@ const AboutSection = () => {
                     partialVisibility={true}
                     minTopValue={300}
                     onChange={(isVisible) => {
-                        if (isVisible) {
+                        if (isVisible && !open) {
                             set(true);
                         }
                     }}
@@ -120,7 +117,7 @@ const AboutSection = () => {
             {state === "skills" && (
                 <SkillsWrapper as={Container}>
                     <Thumbnail>
-                        <div class="image-wrapper">
+                        <div className="image-wrapper">
                             <img
                                 className={"profile-pic"}
                                 src={tech}
@@ -164,7 +161,7 @@ const AboutSection = () => {
             {state === "hobby" && (
                 <SkillsWrapper as={Container}>
                     <Thumbnail>
-                        <div class="image-wrapper">
+                        <div className="image-wrapper">
                             <img
                                 className={"profile-pic"}
                                 src={hobby}

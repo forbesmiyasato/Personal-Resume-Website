@@ -15,7 +15,6 @@ export const Wrapper = styled.div`
 export const Details = styled.div`
     flex: 1;
     padding-right: 2rem;
-
     @media (max-width: 960px) {
         padding-right: unset;
         width: 100%;
@@ -51,8 +50,14 @@ export const Thumbnail = styled.div`
     animation: animatedBackgroundContact 4s ease-in-out infinite alternate;
 
     @keyframes animatedBackgroundContact {
-        0% { transform: translateY(-10px); }
-        50% { transform: translateY(20px); }
-        100% { transform: translateY(-10px); }
+        0% {
+            transform: translateY(-10px);
+        }
+        50% {
+            transform: translateY(20px);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
     }
 `;

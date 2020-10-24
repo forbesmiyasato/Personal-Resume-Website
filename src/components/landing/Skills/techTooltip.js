@@ -17,7 +17,7 @@ const TechTooltip = (props) => {
     return (
         <VizSensor
             onChange={(isVisible) => {
-                if (isVisible) {
+                if (isVisible && !visible) {
                     setVisible(true);
                 }
             }}

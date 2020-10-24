@@ -68,8 +68,8 @@ const Technologies = () => {
 
     const Icon = (i, name, src) => {
         return (
-            <Tooltip title={name} enterTouchDelay='50' arrow>
-                <li key={i} className="skills-list-item">
+            <Tooltip key={i} title={name} enterTouchDelay={50} arrow>
+                <li className="skills-list-item">
                     <img height={"36"} width={"36"} src={src} />
                 </li>
             </Tooltip>
@@ -99,7 +99,7 @@ const Technologies = () => {
                 >
                     <TabPanel value={value} index={0} dir={theme.direction}>
                         <ul className="skills-list">
-                            {technologies.map(({ i, name, icon }) =>
+                            {technologies.map(({  name, icon }, i) =>
                                 Icon(i, name, icon)
                             )}
                         </ul>
@@ -108,15 +108,15 @@ const Technologies = () => {
                         <ul className="skills-list">
                             {technologies
                                 .filter((ele) => ele.familiarity === "primary")
-                                .map(({ i, name, icon }) =>
-                                    Icon(i, name, icon)
+                                .map(({ name, icon }, i) =>
+                                    Icon(i * 100, name, icon)
                                 )}
                         </ul>
                     </TabPanel>
                     <TabPanel value={value} index={2} dir={theme.direction}>
                         <ul className="skills-list">
-                            {learn.map(({ i, name, icon }) =>
-                                Icon(i, name, icon)
+                            {learn.map(({ name, icon }, i) =>
+                                Icon(i * 200, name, icon)
                             )}
                         </ul>
                     </TabPanel>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { ThemeContext } from "providers/ThemeProvider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -6,9 +6,16 @@ import social from "../../social.json";
 import { Trail, animated } from "react-spring/renderprops";
 import VizSensor from "react-visibility-sensor";
 
-const GITSection = () => {
+const GITSection = (props) => {
     const { theme } = useContext(ThemeContext);
     const [open, set] = useState(false);
+    // const [parentOpenned, setParentOpenned] = useState(false);
+    // useEffect(() => {
+    //     console.log("Effect", props.show, parentOpenned)
+    //     if (props.show && !parentOpenned) {
+    //         setParentOpenned(true)
+    //     }
+    // }, [props.show])
 
     const items = [
         <div className="contact-icon">
@@ -46,11 +53,12 @@ const GITSection = () => {
         )),
     ];
 
+    console.log('rerender');
     return (
         <>
             <VizSensor
                 onChange={(isVisible) => {
-                    if (isVisible) {
+                    if (isVisible && !open) {
                         set(true);
                     }
                 }}
