@@ -42,9 +42,8 @@ const AboutSection = () => {
 
     const prop = useSpring({
         opacity: open ? 1 : 0,
-        transform:
-            open ? "translateY(0px)" : "translateY(50px)",
-        config: { duration: 250 }
+        transform: open ? "translateY(0px)" : "translateY(50px)",
+        config: { duration: 250 },
     });
 
     return (
@@ -94,12 +93,13 @@ const AboutSection = () => {
                                     </Link>
                                 </Breadcrumbs>
                                 <p className="section-box">
-                                    I am a 2020 graduate of Pacific University
-                                    with a degree in Computer Science and
-                                    currently pursuing a Masters of Computer
-                                    Science at Portland State University. I'm
-                                    passionate about software engineering and
-                                    full-stack development.
+                                    I am a Master of Computer Science degree
+                                    candidate at Portland State University
+                                    seeking opportunities as a software
+                                    engineer. I am passionate about software
+                                    engineering and full-stack development, and
+                                    I enjoy self-learning technologies and
+                                    developing applications in my spare time.
                                 </p>
                                 <a
                                     href="/files/Forbes_Miyasato_Resume.pdf"
