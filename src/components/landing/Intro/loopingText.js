@@ -21,7 +21,7 @@ const LoopingText = () => {
                             .typeString("pursuing a M.S. CS at PSU.")
                             .pauseFor(1500)
                             .deleteChars(26)
-                            .typeString("a full-stack development enthusiast.")
+                            .typeString("a full-stack enthusiast.")
                             .pauseFor(1500)
                             .start();
                     }}
