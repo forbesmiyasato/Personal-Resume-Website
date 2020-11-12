@@ -33,7 +33,7 @@ const TechTooltip = (props) => {
                     color="inherit"
                     onClick={props.topSkillsClicked}
                 >
-                    Tech
+                    Skills
                 </Link>
             </Tooltip>
         </VizSensor>

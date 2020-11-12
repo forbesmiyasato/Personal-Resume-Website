@@ -110,7 +110,7 @@ const AboutSection = ({ open }) => {
                                 About Me
                             </Link>
                             <Link color="inherit" onClick={topSkillsClicked}>
-                                <h1>Tech</h1>
+                                <h1>Skills</h1>
                             </Link>
                             <Tooltip
                                 title="And me too!"
@@ -158,7 +158,7 @@ const AboutSection = ({ open }) => {
                                 color="inherit"
                                 onClick={topSkillsClicked}
                             >
-                                Tech
+                                Skills
                             </Link>
                             <Link color="inherit" onClick={hobbyClicked}>
                                 <h1>Hobbies</h1>

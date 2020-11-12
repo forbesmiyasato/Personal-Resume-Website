@@ -19,12 +19,6 @@
     },
     {
         "id": 0,
-        "name": "Full Stack Development",
-        "icon": "/icons/full-stack-developer.svg",
-        "familarity": "learn"
-    },
-    {
-        "id": 0,
         "name": "AWS",
         "icon": "/icons/aws.svg",
         "familarity": "learn"

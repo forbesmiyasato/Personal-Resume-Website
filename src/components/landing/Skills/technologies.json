@@ -160,6 +160,12 @@
         "name": "JUnit",
         "icon": "/icons/junit.svg",
         "familiarity": "used"
+    },
+    {
+        "id": 0,
+        "name": "Full Stack Development",
+        "icon": "/icons/full-stack-developer.svg",
+        "familarity": "primary"
     }
   ]
   
