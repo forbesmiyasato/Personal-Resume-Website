@@ -30,7 +30,7 @@ export const SkillsWrapper = styled.div`
 export const Details = styled.div`
     flex: 1;
     padding-left: 2rem;
-    height: 400px;
+    min-height: 400px;
     @media (max-width: 960px) {
         padding-left: unset;
         width: 100%;
@@ -49,7 +49,7 @@ export const Details = styled.div`
 
     p {
         margin-bottom: 2.5rem;
-        font-size: 20pt;
+        font-size: 1.2rem;
         font-weight: normal;
         line-height: 1.3;
         color: ${({ theme }) => (theme === "dark" ? "#c7c7c7" : "#707070")};
@@ -62,10 +62,6 @@ export const Details = styled.div`
 
     a {
         color: ${({ theme }) => (theme === "dark" ? "#fff" : "#212121")};
-        @media (max-width: 960px) {
-            mix-blend-mode: ${({ theme }) =>
-                theme === "light" ? "unset" : "difference"};
-        }
     }
 
     ol li {

@@ -11,15 +11,12 @@ import Technologies from "./technologies";
 import Button from "@material-ui/core/Button";
 import Tooltip from "@material-ui/core/Tooltip";
 import TechTooltip from "./techTooltip";
-import VizSensor from "react-visibility-sensor";
-import { useSpring, animated } from "react-spring";
 
-const AboutSection = () => {
+const AboutSection = ({ open }) => {
     const { theme } = useContext(ThemeContext);
     const [state, setState] = useState("general");
     const [techClicked, setTechClicked] = useState(false);
     const [hobbiesClicked, setHobbyClicked] = useState(false);
-    const [open, set] = useState(false);
 
     const topSkillsClicked = () => {
         setState("skills");
@@ -40,80 +37,57 @@ const AboutSection = () => {
         }
     };
 
-    const prop = useSpring({
-        opacity: open ? 1 : 0,
-        transform: open ? "translateY(0px)" : "translateY(50px)",
-        config: { duration: 250 },
-    });
-
     return (
         <>
             {state === "general" && (
-                <VizSensor
-                    partialVisibility={true}
-                    minTopValue={300}
-                    onChange={(isVisible) => {
-                        if (isVisible && !open) {
-                            set(true);
-                        }
-                    }}
-                >
-                    <animated.div style={prop}>
-                        <SkillsWrapper as={Container}>
-                            <Thumbnail>
-                                <div className="image-wrapper">
-                                    <img
-                                        className={"profile-pic"}
-                                        src={about}
-                                        alt="About Forbes"
-                                    />
-                                </div>
-                            </Thumbnail>
-                            <Details theme={theme}>
-                                <Breadcrumbs aria-label="breadcrumb">
-                                    <Link
-                                        color="inherit"
-                                        onClick={backToGeneral}
-                                    >
-                                        <h1>About me</h1>
-                                    </Link>
-                                    <TechTooltip
-                                        show={
-                                            techClicked === false ? true : null
-                                        }
-                                        parentVisible={open}
-                                        topSkillsClicked={topSkillsClicked}
-                                    />
-                                    <Link
-                                        style={{ cursor: "pointer" }}
-                                        color="inherit"
-                                        onClick={hobbyClicked}
-                                    >
-                                        Hobbies
-                                    </Link>
-                                </Breadcrumbs>
-                                <p className="section-box">
-                                    I am a Master of Computer Science degree
-                                    candidate at Portland State University
-                                    seeking opportunities as a software
-                                    engineer. I am passionate about software
-                                    engineering and full-stack development, and
-                                    I enjoy self-learning technologies and
-                                    developing applications in my spare time.
-                                </p>
-                                <a
-                                    href="/files/Forbes_Miyasato_Resume.pdf"
-                                    target="_blank"
-                                    rel="nofollow"
-                                >
-                                    <Button variant="contained" color="primary">
-                                        View Resume
-                                    </Button>
-                                </a>
-                            </Details>
-                        </SkillsWrapper>
-                    </animated.div>
-                </VizSensor>
+                <SkillsWrapper as={Container}>
+                    <Thumbnail>
+                        <div className="image-wrapper">
+                            <img
+                                className={"profile-pic"}
+                                src={about}
+                                alt="About Forbes"
+                            />
+                        </div>
+                    </Thumbnail>
+                    <Details theme={theme}>
+                        <Breadcrumbs aria-label="breadcrumb">
+                            <Link color="inherit" onClick={backToGeneral}>
+                                <h1>About me</h1>
+                            </Link>
+                            <TechTooltip
+                                show={techClicked === false ? true : null}
+                                parentVisible={open}
+                                topSkillsClicked={topSkillsClicked}
+                            />
+                            <Link
+                                style={{ cursor: "pointer" }}
+                                color="inherit"
+                                onClick={hobbyClicked}
+                            >
+                                Hobbies
+                            </Link>
+                        </Breadcrumbs>
+                        <p className="section-box">
+                            I am a Master of Computer Science degree candidate
+                            at Portland State University seeking opportunities
+                            as a software engineer. I was born in Honolulu,
+                            Hawaii but grew up in Beijing, China, and now I'm
+                            located in Beaverton, Oregon. Hence, I'm fluent in
+                            both English and Chinese and able to thrive in
+                            multicultural environments.
+                        </p>
+                        <a
+                            href="/files/Forbes_Miyasato_Resume.pdf"
+                            target="_blank"
+                            rel="nofollow"
+                        >
+                            <Button variant="contained" color="primary">
+                                View Resume
+                            </Button>
+                        </a>
+                    </Details>
+                </SkillsWrapper>
             )}
             {state === "skills" && (
                 <SkillsWrapper as={Container}>
@@ -191,7 +165,12 @@ const AboutSection = () => {
                             </Link>
                         </Breadcrumbs>
                         <p className="section-box">
-                            I enjoy playing basketball and going to the gym.
+                            I am passionate about software engineering and
+                            full-stack development, and I enjoy self-learning
+                            new things and developing applications in my spare
+                            time. Outside of programming, I enjoy playing
+                            basketball, going to the gym and hanging out with
+                            friends.
                         </p>
                     </Details>
                 </SkillsWrapper>
