@@ -11,7 +11,6 @@ import Tab from "@material-ui/core/Tab";
 import Box from "@material-ui/core/Box";
 import SwipeableViews from "react-swipeable-views";
 import Tooltip from "@material-ui/core/Tooltip";
-import Img from "gatsby-image"
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
