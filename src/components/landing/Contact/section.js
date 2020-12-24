@@ -20,14 +20,14 @@ const GITSection = (props) => {
         <div className="contact-icon">
             <a
                 className="mail-icon"
-                href="mailto:forbes@forbesm.com"
+                href="mailto:forbesmiyasato@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
             >
                 <FontAwesomeIcon icon={faEnvelope} />
             </a>
             <p>
-                <span>forbes@forbesm.com</span>
+                <span>forbesmiyasato@gmail.com</span>
             </p>
         </div>,
         ...social.map(({ id, name, link, icon, iconDark }) => (

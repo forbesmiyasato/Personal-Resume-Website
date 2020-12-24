@@ -166,6 +166,18 @@
         "name": "Full Stack Development",
         "icon": "/icons/full-stack-developer.svg",
         "familarity": "primary"
+    },
+    {
+        "id": 0,
+        "name": "Docker",
+        "icon": "/icons/docker.svg",
+        "familarity": "used"
+    },
+    {
+        "id": 0,
+        "name": "Google Cloud Platform",
+        "icon": "/icons/google-cloud.svg",
+        "familarity": "used"
     }
   ]
   

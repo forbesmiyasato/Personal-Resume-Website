@@ -169,7 +169,7 @@ const AboutSection = ({ open }) => {
                             full-stack development, and I enjoy self-learning
                             new things and developing applications in my spare
                             time. Outside of programming, I enjoy playing
-                            basketball, going to the gym and hanging out with
+                            basketball, going to the gym, and hanging out with
                             friends.
                         </p>
                     </Details>
